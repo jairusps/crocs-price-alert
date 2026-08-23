@@ -1,5 +1,5 @@
 {
-  "last_checked": 1787509086,
+  "last_checked": 1787509761,
   "items": {
     "amazon:B0C8CTFQQW": {
       "title": "Crocs",
@@ -25,10 +25,10 @@
       "url": "https://www.amazon.in/dp/B0B4SFCRFP",
       "source": "amazon"
     },
-    "amazon:B07CL7HXD5": {
+    "amazon:B0819RFLJ5": {
       "title": "Crocs",
-      "price": 2385,
-      "url": "https://www.amazon.in/dp/B07CL7HXD5",
+      "price": 4196,
+      "url": "https://www.amazon.in/dp/B0819RFLJ5",
       "source": "amazon"
     },
     "amazon:B081K2YR41": {
@@ -37,10 +37,10 @@
       "url": "https://www.amazon.in/dp/B081K2YR41",
       "source": "amazon"
     },
-    "amazon:B0G26T47QM": {
+    "amazon:B07CL7HXD5": {
       "title": "Crocs",
-      "price": 4196,
-      "url": "https://www.amazon.in/dp/B0G26T47QM",
+      "price": 2385,
+      "url": "https://www.amazon.in/dp/B07CL7HXD5",
       "source": "amazon"
     },
     "amazon:B0F2TFH452": {
@@ -49,10 +49,10 @@
       "url": "https://www.amazon.in/dp/B0F2TFH452",
       "source": "amazon"
     },
-    "amazon:B0819RC5NB": {
+    "amazon:B0819RMYQR": {
       "title": "Crocs",
-      "price": 1922,
-      "url": "https://www.amazon.in/dp/B0819RC5NB",
+      "price": 4196,
+      "url": "https://www.amazon.in/dp/B0819RMYQR",
       "source": "amazon"
     },
     "amazon:B001V83CBY": {
@@ -61,16 +61,16 @@
       "url": "https://www.amazon.in/dp/B001V83CBY",
       "source": "amazon"
     },
-    "amazon:B0819RMYQR": {
+    "amazon:B0G26QQ8DT": {
       "title": "Crocs",
-      "price": 4196,
-      "url": "https://www.amazon.in/dp/B0819RMYQR",
+      "price": 3597,
+      "url": "https://www.amazon.in/dp/B0G26QQ8DT",
       "source": "amazon"
     },
-    "amazon:B001V83AZC": {
+    "amazon:B0819RC5HR": {
       "title": "Crocs",
-      "price": 2994,
-      "url": "https://www.amazon.in/dp/B001V83AZC",
+      "price": 2980,
+      "url": "https://www.amazon.in/dp/B0819RC5HR",
       "source": "amazon"
     },
     "amazon:B0B4SDY8V7": {
@@ -79,22 +79,34 @@
       "url": "https://www.amazon.in/dp/B0B4SDY8V7",
       "source": "amazon"
     },
-    "amazon:B0G2SV5NMH": {
-      "title": "Crocs",
-      "price": 3496,
-      "url": "https://www.amazon.in/dp/B0G2SV5NMH",
-      "source": "amazon"
-    },
     "amazon:B0819S12QN": {
       "title": "Crocs",
       "price": 3495,
       "url": "https://www.amazon.in/dp/B0819S12QN",
       "source": "amazon"
     },
-    "amazon:B0819RC5HR": {
+    "amazon:B001V83AZC": {
       "title": "Crocs",
-      "price": 2980,
-      "url": "https://www.amazon.in/dp/B0819RC5HR",
+      "price": 2994,
+      "url": "https://www.amazon.in/dp/B001V83AZC",
+      "source": "amazon"
+    },
+    "amazon:B0819RC5NB": {
+      "title": "Crocs",
+      "price": 1922,
+      "url": "https://www.amazon.in/dp/B0819RC5NB",
+      "source": "amazon"
+    },
+    "amazon:B0C8CT3MR4": {
+      "title": "Crocs",
+      "price": 3846,
+      "url": "https://www.amazon.in/dp/B0C8CT3MR4",
+      "source": "amazon"
+    },
+    "amazon:B0G2SV5NMH": {
+      "title": "Crocs",
+      "price": 3496,
+      "url": "https://www.amazon.in/dp/B0G2SV5NMH",
       "source": "amazon"
     },
     "amazon:B0819RPPKN": {
@@ -109,28 +121,28 @@
       "url": "https://www.amazon.in/dp/B0C743YYNS",
       "source": "amazon"
     },
-    "amazon:B0819QZNRX": {
-      "title": "Crocs",
-      "price": 2446,
-      "url": "https://www.amazon.in/dp/B0819QZNRX",
-      "source": "amazon"
-    },
     "amazon:B0819RRLM9": {
       "title": "Crocs",
       "price": 3496,
       "url": "https://www.amazon.in/dp/B0819RRLM9",
       "source": "amazon"
     },
-    "amazon:B098LX4N97": {
-      "title": "Crocs",
-      "price": 1489,
-      "url": "https://www.amazon.in/dp/B098LX4N97",
-      "source": "amazon"
-    },
     "amazon:B0DR3LD2LM": {
       "title": "Crocs",
       "price": 7995,
       "url": "https://www.amazon.in/dp/B0DR3LD2LM",
+      "source": "amazon"
+    },
+    "amazon:B0819QZNRX": {
+      "title": "Crocs",
+      "price": 2446,
+      "url": "https://www.amazon.in/dp/B0819QZNRX",
+      "source": "amazon"
+    },
+    "amazon:B098LX4N97": {
+      "title": "Crocs",
+      "price": 1489,
+      "url": "https://www.amazon.in/dp/B098LX4N97",
       "source": "amazon"
     },
     "amazon:B0819RRJ6B": {
@@ -151,18 +163,6 @@
       "url": "https://www.amazon.in/dp/B0819RTVP4",
       "source": "amazon"
     },
-    "amazon:B0GRVXGP28": {
-      "title": "Crocs",
-      "price": 7495,
-      "url": "https://www.amazon.in/dp/B0GRVXGP28",
-      "source": "amazon"
-    },
-    "amazon:B0FDDRF621": {
-      "title": "Crocs",
-      "price": 4495,
-      "url": "https://www.amazon.in/dp/B0FDDRF621",
-      "source": "amazon"
-    },
     "amazon:B0B4SHHGRS": {
       "title": "Crocs",
       "price": 4396,
@@ -175,10 +175,16 @@
       "url": "https://www.amazon.in/dp/B0BFNMXS96",
       "source": "amazon"
     },
-    "amazon:B0DPKF4J5T": {
+    "amazon:B0FDDRF621": {
       "title": "Crocs",
-      "price": 7995,
-      "url": "https://www.amazon.in/dp/B0DPKF4J5T",
+      "price": 4495,
+      "url": "https://www.amazon.in/dp/B0FDDRF621",
+      "source": "amazon"
+    },
+    "amazon:B0GRVXGP28": {
+      "title": "Crocs",
+      "price": 7495,
+      "url": "https://www.amazon.in/dp/B0GRVXGP28",
       "source": "amazon"
     },
     "amazon:B0G641C7VM": {
@@ -187,22 +193,40 @@
       "url": "https://www.amazon.in/dp/B0G641C7VM",
       "source": "amazon"
     },
-    "amazon:B0C53VR2PW": {
+    "amazon:B0DR3L7STZ": {
       "title": "Crocs",
-      "price": 2697,
-      "url": "https://www.amazon.in/dp/B0C53VR2PW",
+      "price": 7995,
+      "url": "https://www.amazon.in/dp/B0DR3L7STZ",
+      "source": "amazon"
+    },
+    "amazon:B0819RTJRJ": {
+      "title": "Crocs",
+      "price": 4196,
+      "url": "https://www.amazon.in/dp/B0819RTJRJ",
+      "source": "amazon"
+    },
+    "amazon:B0C8CT586L": {
+      "title": "Crocs",
+      "price": 4396,
+      "url": "https://www.amazon.in/dp/B0C8CT586L",
+      "source": "amazon"
+    },
+    "amazon:B005EU62N0": {
+      "title": "Crocs",
+      "price": 3146,
+      "url": "https://www.amazon.in/dp/B005EU62N0",
+      "source": "amazon"
+    },
+    "amazon:B09KCHF4ZW": {
+      "title": "Crocs",
+      "price": 2796,
+      "url": "https://www.amazon.in/dp/B09KCHF4ZW",
       "source": "amazon"
     },
     "amazon:B0C74447HN": {
       "title": "Crocs",
       "price": 2697,
       "url": "https://www.amazon.in/dp/B0C74447HN",
-      "source": "amazon"
-    },
-    "amazon:B0C8CTKRVL": {
-      "title": "Crocs",
-      "price": 3846,
-      "url": "https://www.amazon.in/dp/B0C8CTKRVL",
       "source": "amazon"
     }
   }
