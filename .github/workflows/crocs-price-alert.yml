@@ -2,26 +2,21 @@ name: Crocs Price Alert
 
 on:
   schedule:
-    # Every hour at minute 17.
-    - cron: "17 * * * *"
-  workflow_dispatch:
+    # Runs every 6 hours (UTC). Adjust as needed.
+    - cron: "0 */6 * * *"
+  workflow_dispatch: {}
 
 permissions:
   contents: write
 
 concurrency:
-  group: crocs-price-monitor
-  cancel-in-progress: true
+  group: crocs-price-alert
+  cancel-in-progress: false
 
 jobs:
   check-prices:
     runs-on: ubuntu-latest
-
-    env:
-      PRICE_LIMIT: "2000"
-      SEARCH_TERM: "Crocs"
-      MAX_PRODUCTS_PER_SITE: "40"
-      STATE_FILE: "data/prices.json"
+    timeout-minutes: 15
 
     steps:
       - name: Checkout repository
@@ -32,16 +27,12 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
-          cache: "pip"
+          python-version: "3.11"
 
-      - name: Install Python dependencies
-        run: pip install -r requirements.txt
+      - name: Install dependencies
+        run: pip install --no-cache-dir -r requirements.txt
 
-      - name: Install Chromium
-        run: python -m playwright install --with-deps chromium
-
-      - name: Check Crocs prices
+      - name: Run price tracker
         env:
           SCRAPERAPI_KEY: ${{ secrets.SCRAPERAPI_KEY }}
           GMAIL_USERNAME: ${{ secrets.GMAIL_USERNAME }}
@@ -49,14 +40,14 @@ jobs:
           ALERT_TO: ${{ secrets.ALERT_TO }}
         run: python price_tracker.py
 
-      - name: Commit price history
+      - name: Commit updated price history
         run: |
-          if git diff --quiet -- data/prices.json; then
-            echo "No price-history changes."
-            exit 0
-          fi
-          git config user.name "crocs-price-bot"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/prices.json
-          git commit -m "Update Crocs price history"
-          git push
+          if git diff --cached --quiet; then
+            echo "No changes to data/prices.json, skipping commit."
+          else
+            git commit -m "chore: update crocs price history [skip ci]"
+            git push
+          fi
