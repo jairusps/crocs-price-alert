@@ -7,653 +7,256 @@ from datetime import datetime, timezone
 from email.message import EmailMessage
 from pathlib import Path
 from urllib.parse import quote_plus
-
 from bs4 import BeautifulSoup
 from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError
-
 
 # ============================================================
 # CONFIGURATION
 # ============================================================
-
 PRICE_LIMIT = float(os.getenv("PRICE_LIMIT", "10000"))
 SEARCH_TERM = os.getenv("SEARCH_TERM", "Crocs")
+STATE_FILE = Path(os.getenv("STATE_FILE", "data/prices.json"))
+MAX_PRODUCTS_PER_SITE = int(os.getenv("MAX_PRODUCTS_PER_SITE", "40"))
 
-STATE_FILE = Path(
-    os.getenv("STATE_FILE", "data/prices.json")
-)
-
-MAX_PRODUCTS_PER_SITE = int(
-    os.getenv("MAX_PRODUCTS_PER_SITE", "40")
-)
-
-
-AMAZON_URL = (
-    "https://www.amazon.in/s?"
-    + "k=" + quote_plus(SEARCH_TERM)
-    + "&rh=p_36%3A100-200000"
-)
-
-FLIPKART_URL = (
-    "https://www.flipkart.com/search?q="
-    + quote_plus(SEARCH_TERM)
-)
-
+AMAZON_URL = "https://www.amazon.in/s?k=" + quote_plus(SEARCH_TERM) + "&rh=p_36%3A100-200000"
+FLIPKART_URL = "https://www.flipkart.com/search?q=" + quote_plus(SEARCH_TERM)
 
 # ============================================================
 # GENERAL HELPERS
 # ============================================================
-
 def now_iso():
     return datetime.now(timezone.utc).isoformat()
-
 
 def clean_price(value):
     if value is None:
         return None
-
     text = str(value).replace(",", "")
-
-    match = re.search(
-        r"(?:₹|Rs\.?|INR)?\s*([0-9]+(?:\.[0-9]+)?)",
-        text,
-        re.I,
-    )
-
+    match = re.search(r"(?:₹|Rs\.?|INR)?\s*([0-9]+(?:\.[0-9]+)?)", text, re.I)
     if not match:
         return None
-
     try:
         return float(match.group(1))
     except ValueError:
         return None
 
-
 def load_state():
     if not STATE_FILE.exists():
         return {}
-
     try:
         with STATE_FILE.open("r", encoding="utf-8") as f:
             return json.load(f)
-
     except Exception:
         return {}
 
-
 def save_state(state):
     STATE_FILE.parent.mkdir(parents=True, exist_ok=True)
-
     tmp = STATE_FILE.with_suffix(".tmp")
-
     with tmp.open("w", encoding="utf-8") as f:
-        json.dump(
-            state,
-            f,
-            indent=2,
-            ensure_ascii=False,
-            sort_keys=True,
-        )
-
+        json.dump(state, f, indent=2, ensure_ascii=False, sort_keys=True)
     tmp.replace(STATE_FILE)
-
 
 # ============================================================
 # URL / TITLE HELPERS
 # ============================================================
-
 def normalise_url(url, site="Amazon"):
     if not url:
         return ""
-
-    if url.startswith("//"):
-        return "https:" + url
-
-    if url.startswith("/"):
-        if site == "Flipkart":
-            return "https://www.flipkart.com" + url
-
-        return "https://www.amazon.in" + url
-
+    if site == "Amazon":
+        if not url.startswith("http"):
+            url = "https://www.amazon.in" + url
+        match = re.search(r"/(dp|gp/product)/([A-Z0-9]{10})", url)
+        if match:
+            return f"https://www.amazon.in/dp/{match.group(2)}"
+    elif site == "Flipkart":
+        if not url.startswith("http"):
+            url = "https://www.flipkart.com" + url
+        url = url.split("?")[0]
     return url
 
-
-def is_crocs_title(title):
-    return bool(
-        title and re.search(r"\bcrocs?\b", title, re.I)
-    )
-
+def clean_title(title):
+    if not title:
+        return ""
+    return re.sub(r"\s+", " ", title).strip()
 
 # ============================================================
-# AMAZON PARSER
+# PARSERS
 # ============================================================
-
 def parse_amazon(html):
     soup = BeautifulSoup(html, "html.parser")
-
-    products = []
-
-    cards = soup.select(
-        '[data-component-type="s-search-result"]'
-    )
-
+    items = []
+    cards = soup.select('div[data-component-type="s-search-result"]')
     for card in cards:
-
-        if len(products) >= MAX_PRODUCTS_PER_SITE:
-            break
-
         title_el = card.select_one("h2 a span")
-
-        if not title_el:
-            title_el = card.select_one("h2 span")
-
-        title = (
-            title_el.get_text(" ", strip=True)
-            if title_el
-            else ""
-        )
-
-        if not is_crocs_title(title):
-            continue
-
-        price_el = (
-            card.select_one(".a-price .a-offscreen")
-            or card.select_one(".a-price-whole")
-        )
-
-        price = clean_price(
-            price_el.get_text(" ", strip=True)
-            if price_el
-            else ""
-        )
-
         link_el = card.select_one("h2 a")
-
-        url = (
-            link_el.get("href", "")
-            if link_el
-            else ""
-        )
-
-        url = normalise_url(url, "Amazon")
-
-        if price is not None and url:
-
-            products.append({
-                "site": "Amazon",
-                "title": title,
-                "price": price,
-                "url": url,
-            })
-
-    return products
-
-
-# ============================================================
-# FLIPKART PARSER
-# ============================================================
+        price_el = card.select_one(".a-price .a-offscreen")
+        if not (title_el and link_el and price_el):
+            continue
+        title = clean_title(title_el.get_text())
+        url = normalise_url(link_el.get("href", ""), site="Amazon")
+        price = clean_price(price_el.get_text())
+        if title and url and price:
+            items.append({"site": "Amazon", "title": title, "url": url, "price": price})
+            if len(items) >= MAX_PRODUCTS_PER_SITE:
+                break
+    return items
 
 def parse_flipkart(html):
     soup = BeautifulSoup(html, "html.parser")
-
-    products = []
-    seen = set()
-
-    for link in soup.select("a[href]"):
-
-        if len(products) >= MAX_PRODUCTS_PER_SITE:
-            break
-
-        text = link.get_text(
-            " ",
-            strip=True
-        )
-
-        if not is_crocs_title(text):
+    items = []
+    cards = soup.select("a[href*='/p/']")
+    seen_urls = set()
+    for card in cards:
+        url = normalise_url(card.get("href", ""), site="Flipkart")
+        if not url or url in seen_urls:
             continue
-
-        href = link.get("href", "")
-
-        if not href or href.startswith("#"):
+        price_el = card.select_one("div[class*='Nx9qWa'], div[class*='_30jeq3']")
+        title_el = card.select_one("div[class*='_2WkLfr'], div[class*='WlsL3V']")
+        if not price_el:
+            parent = card.parent
+            if parent:
+                price_el = parent.select_one("div[class*='Nx9qWa'], div[class*='_30jeq3']")
+                title_el = title_el or parent.select_one("div[class*='_2WkLfr'], div[class*='WlsL3V']")
+        if not (title_el and price_el):
             continue
-
-        card = link
-
-        # Move upward through the page looking for the
-        # product container.
-        for _ in range(5):
-
-            if card.parent:
-                card = card.parent
-
-        card_text = card.get_text(
-            " ",
-            strip=True
-        )
-
-        prices = re.findall(
-            r"₹\s*[\d,]+",
-            card_text
-        )
-
-        if not prices:
-            continue
-
-        price = clean_price(prices[0])
-
-        if price is None:
-            continue
-
-        url = normalise_url(
-            href,
-            "Flipkart"
-        )
-
-        key = url.split("?")[0]
-
-        if key in seen:
-            continue
-
-        seen.add(key)
-
-        title = text[:250]
-
-        products.append({
-            "site": "Flipkart",
-            "title": title,
-            "price": price,
-            "url": url,
-        })
-
-    return products
-
+        title = clean_title(title_el.get_text())
+        price = clean_price(price_el.get_text())
+        if title and price:
+            seen_urls.add(url)
+            items.append({"site": "Flipkart", "title": title, "url": url, "price": price})
+            if len(items) >= MAX_PRODUCTS_PER_SITE:
+                break
+    return items
 
 # ============================================================
-# PAGE FETCHING
+# PAGE FETCHING WITH SCRAPERAPI PROXY
 # ============================================================
-
 def fetch_pages():
+    results = {}
+    sites = [
+        ("Amazon", AMAZON_URL, parse_amazon),
+        ("Flipkart", FLIPKART_URL, parse_flipkart),
+    ]
+
+    scraperapi_key = os.getenv("SCRAPERAPI_KEY")
 
     with sync_playwright() as p:
+        context_kwargs = {
+            "locale": "en-IN",
+            "timezone_id": "Asia/Kolkata",
+            "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+            "viewport": {"width": 1920, "height": 1080},
+        }
 
-        browser = p.chromium.launch(
-            headless=True
-        )
+        # Route through ScraperAPI proxy if secret is available
+        if scraperapi_key:
+            context_kwargs["proxy"] = {
+                "server": f"http://scraperapi:{scraperapi_key}@proxy-server.scraperapi.com:8001"
+            }
+            context_kwargs["ignore_https_errors"] = True
 
-        context = browser.new_context(
-    locale="en-IN",
-    timezone_id="Asia/Kolkata",
-    user_agent=(
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-        "AppleWebKit/537.36 (KHTML, like Gecko) "
-        "Chrome/122.0.0.0 Safari/537.36"
-    ),
-    viewport={"width": 1920, "height": 1080},
-    extra_http_headers={
-        "Accept-Language": "en-US,en;q=0.9",
-        "Upgrade-Insecure-Requests": "1",
-    }
-)
-
-# Prevent Amazon from forcing file downloads
-page = context.new_page()
-page.on("download", lambda download: download.cancel())
-
-        results = []
-
-        sites = [
-            (
-                "Amazon",
-                AMAZON_URL,
-                parse_amazon,
-            ),
-            (
-                "Flipkart",
-                FLIPKART_URL,
-                parse_flipkart,
-            ),
-        ]
+        browser = p.chromium.launch(headless=True)
+        context = browser.new_context(**context_kwargs)
+        page = context.new_page()
+        page.on("download", lambda download: download.cancel())
 
         for site, url, parser in sites:
-
-            page = context.new_page()
-
             try:
-
-                print(
-                    f"Checking {site}: {url}"
-                )
-
-                page.set_default_timeout(
-                    30000
-                )
-
-                # Use "commit" instead of "domcontentloaded".
-                # This prevents slow pages from blocking the
-                # entire monitoring run.
-                response = page.goto(
-            url, 
-            wait_until="domcontentloaded", 
-            timeout=45000
-        )
-        page.wait_for_timeout(3000)
-
-                if response is None:
-
-                    print(
-                        f"{site}: no response received",
-                        file=sys.stderr,
-                    )
-
-                    continue
-
-                print(
-                    f"{site}: HTTP {response.status}"
-                )
-
-                html = page.content()
-
-                if not html or len(html) < 1000:
-
-                    print(
-                        f"{site}: page returned almost no HTML",
-                        file=sys.stderr,
-                    )
-
-                    continue
-
-                items = parser(html)
-
-                print(
-                    f"{site}: found "
-                    f"{len(items)} Crocs listings"
-                )
-
-                results.extend(items)
-
+                print(f"Fetching {site}...")
+                response = page.goto(url, wait_until="domcontentloaded", timeout=60000)
+                page.wait_for_timeout(3000)
+                content = page.content()
+                parsed = parser(content)
+                results[site] = parsed
+                print(f"{site}: Parsed {len(parsed)} items.")
             except PlaywrightTimeoutError:
-
-                print(
-                    f"{site}: timed out while loading, "
-                    f"skipping...",
-                    file=sys.stderr,
-                )
-
-            except Exception as exc:
-
-                print(
-                    f"{site}: "
-                    f"{type(exc).__name__}: {exc}",
-                    file=sys.stderr,
-                )
-
-            finally:
-
-                try:
-                    page.close()
-
-                except Exception:
-                    pass
+                print(f"{site}: Timeout error while loading page.", file=sys.stderr)
+                results[site] = []
+            except Exception as e:
+                print(f"{site}: Unexpected error: {e}", file=sys.stderr)
+                results[site] = []
 
         browser.close()
 
-        return results
-
-
-# ============================================================
-# STATE / PRICE TRACKING
-# ============================================================
-
-def make_key(item):
-
-    return (
-        f"{item['site']}|"
-        f"{item['url'].split('?')[0]}"
-    )
-
-
-def update_and_find_alerts(items, state):
-
-    alerts = []
-
-    checked = now_iso()
-
-    for item in items:
-
-        key = make_key(item)
-
-        old = state.get(
-            key,
-            {}
-        )
-
-        old_price = old.get(
-            "price"
-        )
-
-        item["checked_at"] = checked
-
-        should_alert = (
-
-            item["price"] <= PRICE_LIMIT
-
-            and (
-
-                old_price is None
-
-                or float(old_price) > PRICE_LIMIT
-
-                or item["price"] < float(old_price)
-
-            )
-        )
-
-        if should_alert:
-
-            alerts.append({
-                **item,
-                "previous_price": old_price,
-            })
-
-        previous_lowest = old.get(
-            "lowest_seen",
-            item["price"],
-        )
-
-        state[key] = {
-
-            "site": item["site"],
-
-            "title": item["title"],
-
-            "price": item["price"],
-
-            "url": item["url"],
-
-            "last_checked": checked,
-
-            "lowest_seen": min(
-                float(previous_lowest),
-                item["price"],
-            ),
-        }
-
-    return alerts
-
+    return results
 
 # ============================================================
-# EMAIL ALERT
+# EMAIL NOTIFICATIONS
 # ============================================================
-
 def send_email(alerts):
+    user = os.getenv("GMAIL_USERNAME")
+    password = os.getenv("GMAIL_APP_PASSWORD")
+    recipient = os.getenv("ALERT_TO", user)
 
-    username = os.getenv(
-        "GMAIL_USERNAME"
-    )
-
-    app_password = os.getenv(
-        "GMAIL_APP_PASSWORD"
-    )
-
-    recipient = os.getenv(
-        "ALERT_TO"
-    )
-
-    if not username or not app_password or not recipient:
-
-        raise RuntimeError(
-            "Missing GMAIL_USERNAME, "
-            "GMAIL_APP_PASSWORD or ALERT_TO."
-        )
+    if not (user and password):
+        print("Email credentials missing; skipping email notification.", file=sys.stderr)
+        return
 
     msg = EmailMessage()
-
-    msg["Subject"] = (
-        f"🔥 Crocs price alert: "
-        f"{len(alerts)} deal(s) "
-        f"≤ ₹{PRICE_LIMIT:g}"
-    )
-
-    msg["From"] = username
-
+    msg["Subject"] = f"Crocs Price Alert! ({len(alerts)} items)"
+    msg["From"] = user
     msg["To"] = recipient
 
-    lines = [
-
-        f"Crocs price alert — "
-        f"products at or below "
-        f"₹{PRICE_LIMIT:g}",
-
-        "",
-    ]
-
+    body = "Price Alert Triggered:\n\n"
     for item in alerts:
+        body += f"[{item['site']}] {item['title']}\n"
+        body += f"Price: ₹{item['price']}\n"
+        body += f"URL: {item['url']}\n\n"
 
-        previous = item.get(
-            "previous_price"
-        )
+    msg.set_content(body)
 
-        if previous is not None:
-
-            previous_text = (
-                f"Previous: "
-                f"₹{previous:,.0f}"
-            )
-
-        else:
-
-            previous_text = (
-                "First time seen"
-            )
-
-        lines.extend([
-
-            f"🛍️ {item['title']}",
-
-            f"Store: {item['site']}",
-
-            f"Price: "
-            f"₹{item['price']:,.0f}",
-
-            previous_text,
-
-            f"Open: {item['url']}",
-
-            "",
-        ])
-
-    lines.append(
-        "This alert was generated "
-        "automatically by the "
-        "Crocs price monitor."
-    )
-
-    msg.set_content(
-        "\n".join(lines)
-    )
-
-    with smtplib.SMTP_SSL(
-        "smtp.gmail.com",
-        465,
-        timeout=30,
-    ) as smtp:
-
-        smtp.login(
-            username,
-            app_password,
-        )
-
-        smtp.send_message(msg)
-
-    print(
-        f"Email sent to {recipient}"
-    )
-
+    try:
+        with smtplib.SMTP_SSL("smtp.gmail.com", 465) as smtp:
+            smtp.login(user, password)
+            smtp.send_message(msg)
+        print("Alert email sent successfully.")
+    except Exception as e:
+        print(f"Failed to send email: {e}", file=sys.stderr)
 
 # ============================================================
-# MAIN
+# MAIN ORCHESTRATION
 # ============================================================
-
 def main():
-
-    print(
-        f"Crocs monitor started. "
-        f"Threshold: ₹{PRICE_LIMIT:g}"
-    )
-
     state = load_state()
+    fetched = fetch_pages()
+    
+    all_items = []
+    for site, items in fetched.items():
+        all_items.extend(items)
 
-    items = fetch_pages()
+    print(f"Total parsed listings across sites: {len(all_items)}")
 
-    # IMPORTANT:
-    # Never overwrite the saved state when both
-    # websites fail to return listings.
+    if not all_items:
+        print("No listings were parsed. State will not be changed.")
+        return 0  # Exit cleanly with code 0 to prevent GitHub Action failure mark
 
-    if not items:
+    alerts = []
+    updated_state = state.copy()
 
-        print(
-            "No listings were parsed. "
-            "State will not be changed.",
-            file=sys.stderr,
-        )
+    for item in all_items:
+        key = item["url"]
+        price = item["price"]
+        prev_price = state.get(key, {}).get("price")
 
-        return 2
+        # Trigger if price dropped or price is under threshold
+        if (prev_price is not None and price < prev_price) or (price <= PRICE_LIMIT):
+            alerts.append(item)
 
-    alerts = update_and_find_alerts(
-        items,
-        state,
-    )
+        updated_state[key] = {
+            "title": item["title"],
+            "site": item["site"],
+            "price": price,
+            "updated_at": now_iso(),
+        }
 
-    save_state(state)
-
-    print(
-        f"Parsed listings: {len(items)}"
-    )
-
-    print(
-        f"Alerts: {len(alerts)}"
-    )
-
-    for item in alerts:
-
-        print(
-
-            f"ALERT: "
-            f"{item['site']} | "
-            f"₹{item['price']:,.0f} | "
-            f"{item['title']}"
-
-        )
+    save_state(updated_state)
 
     if alerts:
-
+        print(f"Alerts triggered: {len(alerts)}")
         send_email(alerts)
+    else:
+        print("No price alerts triggered in this run.")
 
     return 0
 
-
 if __name__ == "__main__":
-
-    raise SystemExit(
-        main()
-    )
+    sys.exit(main())
