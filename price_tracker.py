@@ -281,24 +281,23 @@ def fetch_pages():
         )
 
         context = browser.new_context(
+    locale="en-IN",
+    timezone_id="Asia/Kolkata",
+    user_agent=(
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/122.0.0.0 Safari/537.36"
+    ),
+    viewport={"width": 1920, "height": 1080},
+    extra_http_headers={
+        "Accept-Language": "en-US,en;q=0.9",
+        "Upgrade-Insecure-Requests": "1",
+    }
+)
 
-            locale="en-IN",
-
-            timezone_id="Asia/Kolkata",
-
-            user_agent=(
-                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-                "AppleWebKit/537.36 (KHTML, like Gecko) "
-                "Chrome/131.0.0.0 Safari/537.36"
-            ),
-
-            viewport={
-                "width": 1365,
-                "height": 900,
-            },
-
-            accept_downloads=False,
-        )
+# Prevent Amazon from forcing file downloads
+page = context.new_page()
+page.on("download", lambda download: download.cancel())
 
         results = []
 
@@ -333,12 +332,11 @@ def fetch_pages():
                 # This prevents slow pages from blocking the
                 # entire monitoring run.
                 response = page.goto(
-                    url,
-                    wait_until="commit",
-                    timeout=30000,
-                )
-
-                page.wait_for_timeout(7000)
+            url, 
+            wait_until="domcontentloaded", 
+            timeout=45000
+        )
+        page.wait_for_timeout(3000)
 
                 if response is None:
 
