@@ -43,6 +43,7 @@ jobs:
 
       - name: Check Crocs prices
         env:
+          SCRAPERAPI_KEY: ${{ secrets.SCRAPERAPI_KEY }}
           GMAIL_USERNAME: ${{ secrets.GMAIL_USERNAME }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           ALERT_TO: ${{ secrets.ALERT_TO }}
@@ -54,7 +55,6 @@ jobs:
             echo "No price-history changes."
             exit 0
           fi
-
           git config user.name "crocs-price-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/prices.json
