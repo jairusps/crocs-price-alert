@@ -1,132 +1,109 @@
-# Crocs India Price Alert
+# crocs-price-alert
 
-Automatically checks Amazon India and Flipkart for **Crocs** products and emails an alert when a product is available at or below **₹2,000**.
+Tracks **"Crocs"** listings on **Amazon.in** and **Flipkart**, and sends a
+Gmail alert whenever:
 
-The checker is designed to run with GitHub Actions, so your computer does not need to stay on.
+- a listing's price **drops** compared to the last recorded price, or
+- a listing is available **under ₹2,000**.
 
-## What it does
+Runs on a schedule via GitHub Actions — no server required.
 
-- Searches Amazon India for `Crocs`
-- Searches Flipkart for `Crocs`
-- Extracts product names, URLs and visible prices
-- Keeps a small price-history file in `data/prices.json`
-- Sends an email only when:
-  - a newly discovered product is at/below ₹2,000, or
-  - a previously seen product drops to/below ₹2,000, or
-  - an already-alerted product reaches a new lower price
-- Can be run manually from the GitHub Actions tab
-- Uses Gmail SMTP; your Gmail password is never stored in the repository
+## How it works
 
-## Important limitations
+- `price_tracker.py` fetches search results through **ScraperAPI**
+  (`http://api.scraperapi.com`, `render=true`) using plain `requests` calls —
+  **no Playwright / headless browser**, since headless browsers running from
+  GitHub Actions' cloud IPs get blocked or time out on Amazon/Flipkart.
+- Results are parsed with **BeautifulSoup** using resilient, multi-fallback
+  CSS selectors for both sites (their markup/class names change often).
+- Price history is stored in [`data/prices.json`](data/prices.json), which
+  the workflow commits back to the repo after every run.
+- The script always exits `0`, even if zero items are found or an error
+  occurs, so a bad scrape doesn't fail the scheduled workflow. Check the
+  Action logs to see what actually happened on a given run.
 
-Retail sites can change their HTML, use bot protection, location-dependent pricing, size-dependent pricing, or show prices that require selecting a variant. This monitor therefore treats the visible listing price as the trigger price and may occasionally miss a product.
+## Files
 
-Amazon/Flipkart may also block automated requests temporarily. The workflow will still finish without exposing your credentials.
+| File | Purpose |
+|---|---|
+| `price_tracker.py` | Main script: scrape → parse → compare → email → save |
+| `.github/workflows/crocs-price-alert.yml` | Scheduled workflow (every 6h + manual trigger) |
+| `requirements.txt` | `requests`, `beautifulsoup4` |
+| `data/prices.json` | Auto-generated/updated price history (created on first run) |
 
 ## Setup
 
-### 1. Create a GitHub repository
+### 1. Get a ScraperAPI key
 
-Create a repository, preferably public if you want GitHub-hosted Actions to be free.
-
-Upload all files from this project.
+Sign up at [scraperapi.com](https://www.scraperapi.com/) and copy your API
+key from the dashboard. The free tier is enough to test this out.
 
 ### 2. Create a Gmail App Password
 
-Your Google account needs 2-Step Verification before an App Password can be created.
+Gmail requires an **App Password** (not your normal password) for SMTP:
 
-In Google Account security, create a new App Password for this monitor.
-
-**Do not put the App Password in this repository.**
+1. Enable 2-Step Verification on the Gmail account you want to send *from*:
+   <https://myaccount.google.com/security>
+2. Go to <https://myaccount.google.com/apppasswords>
+3. Create an app password (choose "Mail" / "Other") and copy the 16-character
+   code.
 
 ### 3. Add GitHub Secrets
 
-Open:
+In your repository: **Settings → Secrets and variables → Actions → New
+repository secret**. Add each of these:
 
-`Repository → Settings → Secrets and variables → Actions → New repository secret`
-
-Create:
-
-| Secret | Value |
+| Secret name | Value |
 |---|---|
-| `GMAIL_USERNAME` | your Gmail address |
-| `GMAIL_APP_PASSWORD` | the 16-character Gmail App Password |
-| `ALERT_TO` | the email address receiving alerts |
+| `SCRAPERAPI_KEY` | Your ScraperAPI key |
+| `GMAIL_USERNAME` | The Gmail address alerts are sent **from** (e.g. `you@gmail.com`) |
+| `GMAIL_APP_PASSWORD` | The 16-character Gmail App Password from step 2 |
+| `ALERT_TO` | The email address alerts should be sent **to** (can be the same as `GMAIL_USERNAME`) |
 
-For your setup, `ALERT_TO` can be:
+### 4. Enable the workflow
 
-`jairuspaulsamuel@gmail.com`
+The workflow is scheduled via cron (`0 */6 * * *` — every 6 hours) and can
+also be run manually:
 
-### 4. Enable Actions
+**Actions tab → "Crocs Price Alert" → Run workflow**
 
-Open the repository's **Actions** tab.
+The first run will create `data/prices.json` and commit it back to the repo
+automatically (the workflow has `contents: write` permission for this).
 
-The workflow is scheduled to run every hour.
+## Configuration
 
-You can also choose:
+Open `price_tracker.py` to tweak:
 
-`Actions → Crocs Price Alert → Run workflow`
+- `SEARCH_TERM` — defaults to `"Crocs"`
+- `PRICE_THRESHOLD` — defaults to `2000` (₹)
+- `AMAZON_SEARCH_URL` / `FLIPKART_SEARCH_URL` — change the search query or
+  point at specific category pages
+- Cron schedule — edit the `cron` value in
+  `.github/workflows/crocs-price-alert.yml`
 
-to test it immediately.
-
-### 5. Repository permissions
-
-The workflow commits `data/prices.json` back to the repository so it remembers prices between runs.
-
-Go to:
-
-`Settings → Actions → General → Workflow permissions`
-
-and select:
-
-**Read and write permissions**
-
-The workflow also explicitly requests `contents: write`.
-
-## Changing the threshold
-
-The default is ₹2,000.
-
-In `.github/workflows/crocs-price-alert.yml`:
-
-```yaml
-env:
-  PRICE_LIMIT: "2000"
-```
-
-Change it to another amount if you want.
-
-## Changing the frequency
-
-The workflow currently runs hourly.
-
-GitHub Actions supports scheduled workflows as frequently as every 5 minutes, but hourly is a better starting point for retailer scraping.
-
-## Testing locally
-
-Install Python 3.11+ and:
+## Local testing
 
 ```bash
 pip install -r requirements.txt
-playwright install chromium
+
+export SCRAPERAPI_KEY="your_key"
+export GMAIL_USERNAME="you@gmail.com"
+export GMAIL_APP_PASSWORD="your_app_password"
+export ALERT_TO="you@gmail.com"
+
 python price_tracker.py
 ```
 
-For local testing, set the same email environment variables used by the workflow.
+Check `data/prices.json` afterward to confirm items were captured.
 
-## Security
+## Notes / limitations
 
-Never commit:
-
-- Gmail passwords
-- Gmail App Passwords
-- API keys
-- GitHub tokens
-
-Use GitHub Secrets instead.
-
-## Current behavior
-
-The monitor searches for general `Crocs`, rather than a fixed model. This means it can find clogs, sandals, slides, flip-flops, accessories, etc., whenever the retailer's search results expose them.
-
-It does **not** guarantee that every Crocs listing on either retailer is discovered.
+- Amazon and Flipkart change their page markup periodically. If parsing
+  starts returning 0 items, check the Action logs first — the script logs
+  fetch failures and item counts per site — then update the CSS selectors
+  in `parse_amazon()` / `parse_flipkart()` in `price_tracker.py`.
+- ScraperAPI's free tier has a limited number of monthly requests; each run
+  uses 2 requests (one per site). Adjust the cron frequency to stay within
+  your plan's limits.
+- This project only reads publicly available search-result pages; it does
+  not log in to either site or handle checkout/purchase in any way.
