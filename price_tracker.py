@@ -16,7 +16,7 @@ from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeo
 # CONFIGURATION
 # ============================================================
 
-PRICE_LIMIT = float(os.getenv("PRICE_LIMIT", "2000"))
+PRICE_LIMIT = float(os.getenv("PRICE_LIMIT", "10000"))
 SEARCH_TERM = os.getenv("SEARCH_TERM", "Crocs")
 
 STATE_FILE = Path(
