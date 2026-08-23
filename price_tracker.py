@@ -43,7 +43,7 @@ PRICE_THRESHOLD = 2000  # INR - "item under ₹2000" alert trigger
 
 SCRAPERAPI_KEY = os.environ.get("SCRAPERAPI_KEY", "").strip()
 GMAIL_USERNAME = os.environ.get("GMAIL_USERNAME", "").strip()
-GMAIL_APP_PASSWORD = os.environ.get("GMAIL_APP_PASSWORD", "").strip()
+GMAIL_APP_PASSWORD = os.environ.get("GMAIL_APP_PASSWORD", "").strip().replace(" ", "")
 ALERT_TO = os.environ.get("ALERT_TO", "").strip()
 
 AMAZON_SEARCH_URL = f"https://www.amazon.in/s?k={quote_plus(SEARCH_TERM)}"
@@ -142,7 +142,6 @@ def _parse_price_to_int(raw_price: str | None) -> int | None:
     if not digits:
         return None
     try:
-        # Guard against grabbing paise/decimal noise producing absurd values
         value = int(digits)
         if value <= 0:
             return None
@@ -165,7 +164,6 @@ def parse_amazon(html: str) -> list[dict]:
 
     result_nodes = soup.select("div[data-component-type='s-search-result']")
     if not result_nodes:
-        # Fallback: older/alternate layout
         result_nodes = soup.select("div.s-result-item[data-asin]")
 
     for node in result_nodes:
@@ -185,7 +183,6 @@ def parse_amazon(html: str) -> list[dict]:
         if not title:
             continue
 
-        # Only keep results actually relevant to "Crocs"
         if "croc" not in title.lower():
             continue
 
@@ -237,10 +234,10 @@ def parse_flipkart(html: str) -> list[dict]:
     soup = BeautifulSoup(html, "html.parser")
 
     container_selectors = [
-        "div._1AtVbE",   # classic grid card wrapper
-        "div._4ddWXP",   # alternate card wrapper
-        "div.tUxRFH",    # newer card wrapper (2024+)
-        "a.CGtC98",      # newer anchor-as-card layout
+        "div._1AtVbE",
+        "div._4ddWXP",
+        "div.tUxRFH",
+        "a.CGtC98",
     ]
 
     result_nodes = []
@@ -291,7 +288,6 @@ def parse_flipkart(html: str) -> list[dict]:
         else:
             product_url = href or "https://www.flipkart.com"
 
-        # Use the URL path (minus tracking query params) as a stable-ish id
         stable_id = product_url.split("?")[0]
 
         items.append(
@@ -403,6 +399,23 @@ def send_email_alert(alerts: list[dict]) -> bool:
         )
         return False
 
+    # Sanity-check the app password shape. A real Google App Password is
+    # exactly 16 characters (letters only) once spaces are stripped. If this
+    # doesn't match, the value in the secret almost certainly isn't a valid
+    # app password (e.g. the normal account password was pasted instead) -
+    # fail fast with a clear message instead of letting Google return a
+    # generic 535 error.
+    if len(GMAIL_APP_PASSWORD) != 16 or not GMAIL_APP_PASSWORD.isalnum():
+        log.error(
+            "GMAIL_APP_PASSWORD does not look like a valid Google App "
+            "Password (expected 16 alphanumeric characters after removing "
+            "spaces, got %d characters). Regenerate one at "
+            "https://myaccount.google.com/apppasswords and update the "
+            "GitHub secret.",
+            len(GMAIL_APP_PASSWORD),
+        )
+        return False
+
     subject = f"🐊 Crocs Price Alert - {len(alerts)} deal(s) found"
     body = build_email_body(alerts)
 
@@ -411,17 +424,55 @@ def send_email_alert(alerts: list[dict]) -> bool:
     msg["To"] = ALERT_TO
     msg["Subject"] = subject
     msg.attach(MIMEText(body, "plain", "utf-8"))
+    raw_message = msg.as_string()
 
-    try:
-        with smtplib.SMTP("smtp.gmail.com", 587, timeout=30) as server:
-            server.starttls()
-            server.login(GMAIL_USERNAME, GMAIL_APP_PASSWORD)
-            server.sendmail(GMAIL_USERNAME, [ALERT_TO], msg.as_string())
-        log.info("Alert email sent to %s (%d items)", ALERT_TO, len(alerts))
-        return True
-    except (smtplib.SMTPException, OSError) as exc:
-        log.error("Failed to send email: %s", exc)
-        return False
+    # Try SSL (465) first, then fall back to STARTTLS (587). Some networks
+    # / CI runners have inconsistent behavior between the two; trying both
+    # gives the best chance of success and the logs will show exactly which
+    # one Google rejected and why.
+    attempts = [
+        ("SMTP_SSL", 465),
+        ("SMTP+STARTTLS", 587),
+    ]
+
+    last_error = None
+    for label, port in attempts:
+        try:
+            if label == "SMTP_SSL":
+                server = smtplib.SMTP_SSL("smtp.gmail.com", port, timeout=30)
+            else:
+                server = smtplib.SMTP("smtp.gmail.com", port, timeout=30)
+
+            with server:
+                server.set_debuglevel(0)
+                if label == "SMTP+STARTTLS":
+                    server.starttls()
+                server.login(GMAIL_USERNAME, GMAIL_APP_PASSWORD)
+                server.sendmail(GMAIL_USERNAME, [ALERT_TO], raw_message)
+
+            log.info(
+                "Alert email sent to %s via %s:%d (%d items)",
+                ALERT_TO, label, port, len(alerts),
+            )
+            return True
+
+        except smtplib.SMTPAuthenticationError as exc:
+            last_error = exc
+            log.error(
+                "%s:%d auth rejected by Google (code %s): %s",
+                label, port, exc.smtp_code, exc.smtp_error,
+            )
+        except (smtplib.SMTPException, OSError) as exc:
+            last_error = exc
+            log.error("%s:%d failed: %s", label, port, exc)
+
+    log.error(
+        "All SMTP attempts failed. Last error: %s. This is almost always "
+        "an account-side issue, not a code issue - see README 'Troubleshooting "
+        "Gmail SMTP errors' section.",
+        last_error,
+    )
+    return False
 
 
 # --------------------------------------------------------------------------
@@ -446,7 +497,6 @@ def run() -> None:
             "0 items found this run (site changes, blocked request, or no "
             "matching results). Exiting cleanly without failing the workflow."
         )
-        # Still update the timestamp/history file so we have a record of the run.
         save_prices([])
         return
 
@@ -466,11 +516,8 @@ def main() -> None:
     try:
         run()
     except Exception as exc:  # noqa: BLE001 - intentionally broad
-        # Catch-all so an unexpected bug never fails the GitHub Actions run.
         log.exception("Unexpected error during price check: %s", exc)
     finally:
-        # Per requirements: always exit 0, even with 0 items found or errors,
-        # so the scheduled workflow doesn't go red on transient scraping issues.
         sys.exit(0)
 
 
