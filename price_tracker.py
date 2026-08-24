@@ -12,8 +12,10 @@ Design notes (per known constraints):
   - No Playwright / headless browsers. Cloud/CI IPs get blocked too often.
   - All requests are routed through ScraperAPI's HTTP endpoint with
     render=true so JS-rendered DOM is returned as plain HTML for BeautifulSoup.
-  - Selectors are resilient: multiple fallback CSS selectors are tried for
-    both Amazon and Flipkart, since both sites change markup frequently.
+  - Selectors are resilient: multiple fallback BeautifulSoup CSS selectors
+    are tried for both Amazon.in and Flipkart, since both sites change
+    markup frequently. Flipkart additionally has a structural fallback that
+    doesn't depend on class names at all (see parse_flipkart).
   - The script NEVER raises a nonzero exit code just because zero items were
     scraped/found. It exits 0 in all "expected" failure modes so GitHub
     Actions doesn't go red for a transient scrape miss. Only truly unexpected
@@ -22,6 +24,7 @@ Design notes (per known constraints):
 """
 
 import os
+import re
 import sys
 import json
 import time
@@ -224,8 +227,15 @@ def parse_flipkart(html: str) -> list[dict]:
     """
     Parse Flipkart search results HTML into a list of:
       {"source": "flipkart", "title": str, "price": int, "url": str, "id": str}
-    Flipkart changes its generated class names often, so several fallback
-    container/selector combinations are attempted.
+
+    Flipkart obfuscates and rotates its generated CSS class names frequently,
+    which makes hardcoded selectors brittle. This function tries known
+    class-based selectors first (fast path when they happen to still match),
+    then falls back to a structural approach that doesn't depend on class
+    names at all: Flipkart product detail links reliably contain "/p/" in
+    the URL regardless of styling changes, so we walk up from each such link
+    to a reasonable ancestor container and extract title/price from there
+    using text patterns instead of guessed class names.
     """
     items = []
     if not html:
@@ -233,11 +243,23 @@ def parse_flipkart(html: str) -> list[dict]:
 
     soup = BeautifulSoup(html, "html.parser")
 
+    items.extend(_parse_flipkart_by_selectors(soup))
+
+    if not items:
+        items.extend(_parse_flipkart_structural(soup))
+
+    return items
+
+
+def _parse_flipkart_by_selectors(soup: BeautifulSoup) -> list[dict]:
+    """Fast path: known (but frequently-stale) Flipkart CSS class selectors."""
+    items = []
+
     container_selectors = [
-        "div._1AtVbE",
-        "div._4ddWXP",
-        "div.tUxRFH",
-        "a.CGtC98",
+        "div._1AtVbE",   # classic grid card wrapper
+        "div._4ddWXP",   # alternate card wrapper
+        "div.tUxRFH",    # newer card wrapper (2024+)
+        "a.CGtC98",      # newer anchor-as-card layout
     ]
 
     result_nodes = []
@@ -260,8 +282,7 @@ def parse_flipkart(html: str) -> list[dict]:
             ],
         )
         if not title:
-            title_attr = _first_attr(node, ["a[title]"], "title")
-            title = title_attr
+            title = _first_attr(node, ["a[title]"], "title")
 
         if not title or "croc" not in title.lower():
             continue
@@ -283,11 +304,7 @@ def parse_flipkart(html: str) -> list[dict]:
             ["a._1fQZEK", "a.s1Q9rs", "a.CGtC98", "a.wjcEIp", "a"],
             "href",
         )
-        if href and href.startswith("/"):
-            product_url = f"https://www.flipkart.com{href}"
-        else:
-            product_url = href or "https://www.flipkart.com"
-
+        product_url = _absolutize_flipkart_url(href)
         stable_id = product_url.split("?")[0]
 
         items.append(
@@ -301,6 +318,89 @@ def parse_flipkart(html: str) -> list[dict]:
         )
 
     return items
+
+
+def _parse_flipkart_structural(soup: BeautifulSoup) -> list[dict]:
+    """
+    Class-name-independent fallback. Finds every link to a product detail
+    page (URL contains "/p/", which Flipkart does not rotate), then pulls
+    a title and price out of that link's ancestor container using generic
+    text heuristics instead of specific class names.
+    """
+    price_pattern = re.compile(r"₹\s?[\d,]{3,}")
+    items = []
+    seen_ids = set()
+
+    product_links = [
+        a for a in soup.find_all("a", href=True) if "/p/" in a["href"]
+    ]
+
+    for link in product_links:
+        # Walk up a few ancestor levels looking for a container that has
+        # both a plausible title and a ₹ price nearby - this tolerates
+        # whatever class names Flipkart is currently using.
+        container = link
+        for _ in range(4):
+            if container.parent is None:
+                break
+            container = container.parent
+
+        container_text = container.get_text(" ", strip=True)
+        if "croc" not in container_text.lower():
+            continue
+
+        price_match = price_pattern.search(container_text)
+        price = _parse_price_to_int(price_match.group(0)) if price_match else None
+        if price is None:
+            continue
+
+        # Title: prefer the link's own text or title/aria-label attrs,
+        # then an <img alt="..."> inside it, before falling back to
+        # trimming the container's full text.
+        title = (
+            link.get_text(strip=True)
+            or link.get("title")
+            or link.get("aria-label")
+        )
+        if not title:
+            img = link.find("img")
+            if img and img.has_attr("alt"):
+                title = img["alt"]
+        if not title:
+            title = container_text[:120]
+
+        if "croc" not in title.lower():
+            # Title extraction landed on something irrelevant even though
+            # the container mentioned "croc" elsewhere; skip rather than
+            # risk mislabeling.
+            continue
+
+        product_url = _absolutize_flipkart_url(link["href"])
+        stable_id = product_url.split("?")[0]
+
+        if stable_id in seen_ids:
+            continue
+        seen_ids.add(stable_id)
+
+        items.append(
+            {
+                "source": "flipkart",
+                "id": f"flipkart:{stable_id}",
+                "title": title,
+                "price": price,
+                "url": product_url,
+            }
+        )
+
+    return items
+
+
+def _absolutize_flipkart_url(href: str | None) -> str:
+    if not href:
+        return "https://www.flipkart.com"
+    if href.startswith("/"):
+        return f"https://www.flipkart.com{href}"
+    return href
 
 
 # --------------------------------------------------------------------------
@@ -399,12 +499,6 @@ def send_email_alert(alerts: list[dict]) -> bool:
         )
         return False
 
-    # Sanity-check the app password shape. A real Google App Password is
-    # exactly 16 characters (letters only) once spaces are stripped. If this
-    # doesn't match, the value in the secret almost certainly isn't a valid
-    # app password (e.g. the normal account password was pasted instead) -
-    # fail fast with a clear message instead of letting Google return a
-    # generic 535 error.
     if len(GMAIL_APP_PASSWORD) != 16 or not GMAIL_APP_PASSWORD.isalnum():
         log.error(
             "GMAIL_APP_PASSWORD does not look like a valid Google App "
@@ -426,10 +520,6 @@ def send_email_alert(alerts: list[dict]) -> bool:
     msg.attach(MIMEText(body, "plain", "utf-8"))
     raw_message = msg.as_string()
 
-    # Try SSL (465) first, then fall back to STARTTLS (587). Some networks
-    # / CI runners have inconsistent behavior between the two; trying both
-    # gives the best chance of success and the logs will show exactly which
-    # one Google rejected and why.
     attempts = [
         ("SMTP_SSL", 465),
         ("SMTP+STARTTLS", 587),
