@@ -1,6 +1,36 @@
 {
-  "last_checked": 1792467476,
+  "last_checked": 1792513543,
   "items": {
+    "amazon:B001V7X5FI": {
+      "title": "Crocs",
+      "price": 2497,
+      "url": "https://www.amazon.in/dp/B001V7X5FI",
+      "source": "amazon"
+    },
+    "amazon:B0C8CTRZFJ": {
+      "title": "Crocs",
+      "price": 3022,
+      "url": "https://www.amazon.in/dp/B0C8CTRZFJ",
+      "source": "amazon"
+    },
+    "amazon:B09773BXZY": {
+      "title": "Crocs",
+      "price": 300050,
+      "url": "https://www.amazon.in/dp/B09773BXZY",
+      "source": "amazon"
+    },
+    "amazon:B0BQC3SGSN": {
+      "title": "Crocs",
+      "price": 6995,
+      "url": "https://www.amazon.in/dp/B0BQC3SGSN",
+      "source": "amazon"
+    },
+    "amazon:B0819S12QN": {
+      "title": "Crocs",
+      "price": 2697,
+      "url": "https://www.amazon.in/dp/B0819S12QN",
+      "source": "amazon"
+    },
     "amazon:B0B4SFM89N": {
       "title": "Crocs",
       "price": 2477,
@@ -19,28 +49,16 @@
       "url": "https://www.amazon.in/dp/B0C8CSR2J6",
       "source": "amazon"
     },
-    "amazon:B0819RQ1Z7": {
-      "title": "Crocs",
-      "price": 2625,
-      "url": "https://www.amazon.in/dp/B0819RQ1Z7",
-      "source": "amazon"
-    },
     "amazon:B081K2NP41": {
       "title": "Crocs",
-      "price": 2497,
+      "price": 2475,
       "url": "https://www.amazon.in/dp/B081K2NP41",
       "source": "amazon"
     },
-    "amazon:B0B4SHB2ZW": {
-      "title": "Crocs",
-      "price": 2747,
-      "url": "https://www.amazon.in/dp/B0B4SHB2ZW",
-      "source": "amazon"
-    },
-    "amazon:B0819RRLMB": {
+    "amazon:B0819S62MV": {
       "title": "Crocs",
       "price": 2247,
-      "url": "https://www.amazon.in/dp/B0819RRLMB",
+      "url": "https://www.amazon.in/dp/B0819S62MV",
       "source": "amazon"
     },
     "amazon:B0B4SH7FTT": {
@@ -49,22 +67,16 @@
       "url": "https://www.amazon.in/dp/B0B4SH7FTT",
       "source": "amazon"
     },
-    "amazon:B098LXX58S": {
-      "title": "Crocs",
-      "price": 1797,
-      "url": "https://www.amazon.in/dp/B098LXX58S",
-      "source": "amazon"
-    },
-    "amazon:B07CK8S5Y9": {
-      "title": "Crocs",
-      "price": 2477,
-      "url": "https://www.amazon.in/dp/B07CK8S5Y9",
-      "source": "amazon"
-    },
     "amazon:B0819QZNMX": {
       "title": "Crocs",
       "price": 2695,
       "url": "https://www.amazon.in/dp/B0819QZNMX",
+      "source": "amazon"
+    },
+    "amazon:B0B4SHB2ZW": {
+      "title": "Crocs",
+      "price": 2747,
+      "url": "https://www.amazon.in/dp/B0B4SHB2ZW",
       "source": "amazon"
     },
     "amazon:B0G26SZMZB": {
@@ -73,52 +85,34 @@
       "url": "https://www.amazon.in/dp/B0G26SZMZB",
       "source": "amazon"
     },
-    "amazon:B0819RJ91P": {
-      "title": "Crocs",
-      "price": 175050,
-      "url": "https://www.amazon.in/dp/B0819RJ91P",
-      "source": "amazon"
-    },
     "amazon:B09NM9YNPH": {
       "title": "Crocs",
       "price": 4475,
       "url": "https://www.amazon.in/dp/B09NM9YNPH",
       "source": "amazon"
     },
-    "amazon:B09774T9SQ": {
+    "amazon:B0CNJ15L1D": {
       "title": "Crocs",
-      "price": 2022,
-      "url": "https://www.amazon.in/dp/B09774T9SQ",
+      "price": 7495,
+      "url": "https://www.amazon.in/dp/B0CNJ15L1D",
       "source": "amazon"
     },
-    "amazon:B0BFNMXS96": {
+    "amazon:B098LXX58S": {
       "title": "Crocs",
-      "price": 2977,
-      "url": "https://www.amazon.in/dp/B0BFNMXS96",
+      "price": 1797,
+      "url": "https://www.amazon.in/dp/B098LXX58S",
       "source": "amazon"
     },
-    "amazon:B0C8CTKRVL": {
+    "amazon:B09GH7BQXM": {
       "title": "Crocs",
-      "price": 2472,
-      "url": "https://www.amazon.in/dp/B0C8CTKRVL",
+      "price": 3247,
+      "url": "https://www.amazon.in/dp/B09GH7BQXM",
       "source": "amazon"
     },
-    "amazon:B0C8CTRZFJ": {
+    "amazon:B0819QZNST": {
       "title": "Crocs",
-      "price": 3022,
-      "url": "https://www.amazon.in/dp/B0C8CTRZFJ",
-      "source": "amazon"
-    },
-    "amazon:B0FJGD7HQ7": {
-      "title": "Crocs",
-      "price": 1747,
-      "url": "https://www.amazon.in/dp/B0FJGD7HQ7",
-      "source": "amazon"
-    },
-    "amazon:B0C4HYZ65V": {
-      "title": "Crocs",
-      "price": 6995,
-      "url": "https://www.amazon.in/dp/B0C4HYZ65V",
+      "price": 1727,
+      "url": "https://www.amazon.in/dp/B0819QZNST",
       "source": "amazon"
     },
     "amazon:B0DR3LD2LM": {
@@ -127,22 +121,28 @@
       "url": "https://www.amazon.in/dp/B0DR3LD2LM",
       "source": "amazon"
     },
-    "amazon:B0FDDCGPPC": {
+    "amazon:B0D81LG57K": {
       "title": "Crocs",
-      "price": 4495,
-      "url": "https://www.amazon.in/dp/B0FDDCGPPC",
+      "price": 7120,
+      "url": "https://www.amazon.in/dp/B0D81LG57K",
       "source": "amazon"
     },
-    "amazon:B0FLZS53F1": {
+    "amazon:B0D2NTWCQG": {
       "title": "Crocs",
-      "price": 3597,
-      "url": "https://www.amazon.in/dp/B0FLZS53F1",
+      "price": 1206,
+      "url": "https://www.amazon.in/dp/B0D2NTWCQG",
       "source": "amazon"
     },
-    "amazon:B0819S1TVQ": {
+    "amazon:B0FJGD7HQ7": {
       "title": "Crocs",
-      "price": 2677,
-      "url": "https://www.amazon.in/dp/B0819S1TVQ",
+      "price": 1747,
+      "url": "https://www.amazon.in/dp/B0FJGD7HQ7",
+      "source": "amazon"
+    },
+    "amazon:B0BFNMXS96": {
+      "title": "Crocs",
+      "price": 2977,
+      "url": "https://www.amazon.in/dp/B0BFNMXS96",
       "source": "amazon"
     },
     "amazon:B0F8J47NMD": {
@@ -151,22 +151,40 @@
       "url": "https://www.amazon.in/dp/B0F8J47NMD",
       "source": "amazon"
     },
+    "amazon:B0FDDCGPPC": {
+      "title": "Crocs",
+      "price": 4495,
+      "url": "https://www.amazon.in/dp/B0FDDCGPPC",
+      "source": "amazon"
+    },
+    "amazon:B0819S1TVQ": {
+      "title": "Crocs",
+      "price": 2625,
+      "url": "https://www.amazon.in/dp/B0819S1TVQ",
+      "source": "amazon"
+    },
     "amazon:B0G2SVSXC6": {
       "title": "Crocs",
       "price": 3995,
       "url": "https://www.amazon.in/dp/B0G2SVSXC6",
       "source": "amazon"
     },
-    "amazon:B09GH78429": {
+    "amazon:B0FLZS53F1": {
       "title": "Crocs",
-      "price": 3247,
-      "url": "https://www.amazon.in/dp/B09GH78429",
+      "price": 3597,
+      "url": "https://www.amazon.in/dp/B0FLZS53F1",
       "source": "amazon"
     },
-    "amazon:B0CWF2VBJV": {
+    "amazon:B0D81GPVHL": {
       "title": "Crocs",
-      "price": 1797,
-      "url": "https://www.amazon.in/dp/B0CWF2VBJV",
+      "price": 7120,
+      "url": "https://www.amazon.in/dp/B0D81GPVHL",
+      "source": "amazon"
+    },
+    "amazon:B0B4SDQ21J": {
+      "title": "Crocs",
+      "price": 1997,
+      "url": "https://www.amazon.in/dp/B0B4SDQ21J",
       "source": "amazon"
     },
     "amazon:B0FF2SMG37": {
@@ -175,262 +193,226 @@
       "url": "https://www.amazon.in/dp/B0FF2SMG37",
       "source": "amazon"
     },
-    "amazon:B0F9XFXSXC": {
+    "amazon:B098LYGFJS": {
       "title": "Crocs",
-      "price": 6995,
-      "url": "https://www.amazon.in/dp/B0F9XFXSXC",
+      "price": 1747,
+      "url": "https://www.amazon.in/dp/B098LYGFJS",
       "source": "amazon"
     },
-    "amazon:B0F9XGGBRQ": {
+    "amazon:B0B9C6Y2DN": {
       "title": "Crocs",
-      "price": 2796,
-      "url": "https://www.amazon.in/dp/B0F9XGGBRQ",
+      "price": 4497,
+      "url": "https://www.amazon.in/dp/B0B9C6Y2DN",
       "source": "amazon"
-    },
-    "amazon:B0D81LG57K": {
-      "title": "Crocs",
-      "price": 7120,
-      "url": "https://www.amazon.in/dp/B0D81LG57K",
-      "source": "amazon"
-    },
-    "amazon:B0C7456MTK": {
-      "title": "Crocs",
-      "price": 2247,
-      "url": "https://www.amazon.in/dp/B0C7456MTK",
-      "source": "amazon"
-    },
-    "flipkart:https://www.flipkart.com/crocs-boys-girls-sling-back-clogs/p/itm54e6b2b5b7dd2": {
-      "title": "CROCS Sling Back Clogs For Boys & Girls ₹1,527 ₹3,995 61% off CROCS Unisex Echo Marbled Clogs Sandal ₹7,495 CROCS Unisex",
-      "price": 1527,
-      "url": "https://www.flipkart.com/crocs-boys-girls-sling-back-clogs/p/itm54e6b2b5b7dd2?pid=KSAG976G47PVFU7Z&lid=LSTKSAG976G47PVFU7ZCGO1AG&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_1&otracker=search&fm=organic&iid=en_HtumBzCM2saxNrGzIifw3W3YyroVHekTahjV33YyiSkLfnxyfZmJcjLj-8_DYSdGhXoFQHBCn-rCneNDmBabpV9nNW9k_KDCaj-1uHNNIl9ORMENMloslrxHTAqiaFYf&ppt=None&ppn=None&ssid=puq73e9d8g0000001792467442970&qH=023f61b40dc02292&ov_redirect=true",
-      "source": "flipkart"
-    },
-    "flipkart:https://www.flipkart.com/crocs-echo-marbled-unisex-clogs/p/itm370e13c28c656": {
-      "title": "CROCS Sling Back Clogs For Boys & Girls ₹1,527 ₹3,995 61% off CROCS Unisex Echo Marbled Clogs Sandal ₹7,495 CROCS Unisex",
-      "price": 1527,
-      "url": "https://www.flipkart.com/crocs-echo-marbled-unisex-clogs/p/itm370e13c28c656?pid=SNDH9J2SY3YNHBFA&lid=LSTSNDH9J2SY3YNHBFAVGRYAG&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_2&otracker=search&fm=organic&iid=en_HtumBzCM2saxNrGzIifw3W3YyroVHekTahjV33YyiSkacGa8wy9EtABkBPqnSHYXf_ylxc6iYKneEtNsjD-Rq_uzGMa8py6ZehWd7rAPdDxORMENMloslrxHTAqiaFYf&ppt=None&ppn=None&ssid=puq73e9d8g0000001792467442970&qH=023f61b40dc02292&ov_redirect=true",
-      "source": "flipkart"
-    },
-    "flipkart:https://www.flipkart.com/crocs-bayaband-unisex-clogs/p/itmf9zdexxjdjz7z": {
-      "title": "CROCS Sling Back Clogs For Boys & Girls ₹1,527 ₹3,995 61% off CROCS Unisex Echo Marbled Clogs Sandal ₹7,495 CROCS Unisex",
-      "price": 1527,
-      "url": "https://www.flipkart.com/crocs-bayaband-unisex-clogs/p/itmf9zdexxjdjz7z?pid=SNDFYEZSDBT27ZAU&lid=LSTSNDFYEZSDBT27ZAUZTWFOL&marketplace=FLIPKART&q=Crocs&store=osp&spotlightTagId=default_BestsellerId_osp&srno=s_1_3&otracker=search&fm=organic&iid=1555a9dd-3906-4161-aaab-7323525990f7.SNDFYEZSDBT27ZAU.SEARCH&ppt=None&ppn=None&ssid=puq73e9d8g0000001792467442970&qH=023f61b40dc02292&ov_redirect=true",
-      "source": "flipkart"
     },
     "flipkart:https://www.flipkart.com/crocs-unisex-bayaband-flip-flops/p/itma774d1f76a919": {
-      "title": "CROCS Sling Back Clogs For Boys & Girls ₹1,527 ₹3,995 61% off CROCS Unisex Echo Marbled Clogs Sandal ₹7,495 CROCS Unisex",
-      "price": 1527,
-      "url": "https://www.flipkart.com/crocs-unisex-bayaband-flip-flops/p/itma774d1f76a919?pid=SFFF3K7DCBZHGNTY&lid=LSTSFFF3K7DCBZHGNTYEFHVRZ&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_4&otracker=search&fm=organic&iid=1555a9dd-3906-4161-aaab-7323525990f7.SFFF3K7DCBZHGNTY.SEARCH&ppt=None&ppn=None&ssid=puq73e9d8g0000001792467442970&qH=023f61b40dc02292&ov_redirect=true",
-      "source": "flipkart"
-    },
-    "flipkart:https://www.flipkart.com/crocs-echo-unisex-clogs/p/itmd50be9ed94df2": {
-      "title": "CROCS Unisex Echo Clogs Sandal ₹6,995 CROCS Bayaband Flip Unisex Flip Flops ₹1,250 ₹3,495 64% off CROCS Unisex Flip Flop",
-      "price": 6995,
-      "url": "https://www.flipkart.com/crocs-echo-unisex-clogs/p/itmd50be9ed94df2?pid=SNDGZZ2BPJTVMYC6&lid=LSTSNDGZZ2BPJTVMYC6P36YMG&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_5&otracker=search&fm=organic&iid=en_HtumBzCM2saxNrGzIifw3W3YyroVHekTahjV33YyiSlHhg16x8evwx4HDltmwOYvym8ZrvLHi7YSaxa02mdAHlKS_uyYRqnP2RR2tNLIgy9GaA7pS05oKWVe4kaRuTVz&ppt=None&ppn=None&ssid=puq73e9d8g0000001792467442970&qH=023f61b40dc02292&ov_redirect=true",
-      "source": "flipkart"
-    },
-    "flipkart:https://www.flipkart.com/crocs-unisex-bayaband-flip-flops/p/itm7b90e634f7824": {
-      "title": "CROCS Unisex Echo Clogs Sandal ₹6,995 CROCS Bayaband Flip Unisex Flip Flops ₹1,250 ₹3,495 64% off CROCS Unisex Flip Flop",
-      "price": 6995,
-      "url": "https://www.flipkart.com/crocs-unisex-bayaband-flip-flops/p/itm7b90e634f7824?pid=SFFF8J4BDZRGSCWG&lid=LSTSFFF8J4BDZRGSCWG3FJN3V&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_6&otracker=search&fm=organic&iid=en_HtumBzCM2saxNrGzIifw3W3YyroVHekTahjV33YyiSl4oe9AgBZiGEQSGQkhcuN4xFanztTuBJlJIhxxQTvL7FgKTQ8VBvDcBgArXUNgjGNGaA7pS05oKWVe4kaRuTVz&ppt=None&ppn=None&ssid=puq73e9d8g0000001792467442970&qH=023f61b40dc02292&ov_redirect=true",
-      "source": "flipkart"
-    },
-    "flipkart:https://www.flipkart.com/crocs-unisex-flip-flops/p/itmac65c5c587f5e": {
-      "title": "CROCS Unisex Echo Clogs Sandal ₹6,995 CROCS Bayaband Flip Unisex Flip Flops ₹1,250 ₹3,495 64% off CROCS Unisex Flip Flop",
-      "price": 6995,
-      "url": "https://www.flipkart.com/crocs-unisex-flip-flops/p/itmac65c5c587f5e?pid=SFFHNZ5JHDPYU9HY&lid=LSTSFFHNZ5JHDPYU9HYNKQA7P&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_7&otracker=search&fm=organic&iid=1555a9dd-3906-4161-aaab-7323525990f7.SFFHNZ5JHDPYU9HY.SEARCH&ppt=None&ppn=None&ssid=puq73e9d8g0000001792467442970&qH=023f61b40dc02292&ov_redirect=true",
+      "title": "CROCS Bayaband Flip Unisex Flip Flops ₹1,250 ₹3,495 64% off Top Discount of the Sale CROCS Bayaband Flip Unisex Flip Flo",
+      "price": 1250,
+      "url": "https://www.flipkart.com/crocs-unisex-bayaband-flip-flops/p/itma774d1f76a919?pid=SFFF3K7CVRG5ECGF&lid=LSTSFFF3K7CVRG5ECGFZFNZUS&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_1&otracker=search&fm=organic&iid=en_UY1RLnEpTFRVxzgFg8lLE1ZUAnOvZA0wwoLZR_1rwhGMwhxUnT8zYdevXya2N31SaBU1Teh9JEvUK5lgZ2UsXMu-nl2b-9SsRH7ipyC___XQnkP0B3tvG0L3uZt8AHAl&ppt=None&ppn=None&ssid=k1jfmoh8j40000001792513506805&qH=023f61b40dc02292&ov_redirect=true",
       "source": "flipkart"
     },
     "flipkart:https://www.flipkart.com/crocs-unisex-bayaband-flip-flops/p/itm09d065ab7f0cc": {
-      "title": "CROCS Unisex Echo Clogs Sandal ₹6,995 CROCS Bayaband Flip Unisex Flip Flops ₹1,250 ₹3,495 64% off CROCS Unisex Flip Flop",
-      "price": 6995,
-      "url": "https://www.flipkart.com/crocs-unisex-bayaband-flip-flops/p/itm09d065ab7f0cc?pid=SFFF3K7DW6UQU77Y&lid=LSTSFFF3K7DW6UQU77YLFF69O&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_8&otracker=search&fm=organic&iid=1555a9dd-3906-4161-aaab-7323525990f7.SFFF3K7DW6UQU77Y.SEARCH&ppt=None&ppn=None&ssid=puq73e9d8g0000001792467442970&qH=023f61b40dc02292&ov_redirect=true",
+      "title": "CROCS Bayaband Flip Unisex Flip Flops ₹1,250 ₹3,495 64% off Top Discount of the Sale CROCS Bayaband Flip Unisex Flip Flo",
+      "price": 1250,
+      "url": "https://www.flipkart.com/crocs-unisex-bayaband-flip-flops/p/itm09d065ab7f0cc?pid=SFFF3K7DDYCH2JJH&lid=LSTSFFF3K7DDYCH2JJHQYNLRZ&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_2&otracker=search&fm=organic&iid=en_UY1RLnEpTFRVxzgFg8lLE1ZUAnOvZA0wwoLZR_1rwhGOGlbmZ7S4S2kjvYG2J2_ORA58yTYDwncuC3jJtyspusu-nl2b-9SsRH7ipyC___XQnkP0B3tvG0L3uZt8AHAl&ppt=None&ppn=None&ssid=k1jfmoh8j40000001792513506805&qH=023f61b40dc02292&ov_redirect=true",
       "source": "flipkart"
     },
-    "flipkart:https://www.flipkart.com/crocs-bayaband-unisex-clogs/p/itm9b535a5307c50": {
-      "title": "CROCS Unisex Bayaband Clogs Sandal ₹1,214 ₹5,495 77% off Top Discount of the Sale CROCS Unisex Baya Clogs Sandal ₹2,122 ",
-      "price": 1214,
-      "url": "https://www.flipkart.com/crocs-bayaband-unisex-clogs/p/itm9b535a5307c50?pid=SNDFTHPHJCYAZK8D&lid=LSTSNDFTHPHJCYAZK8DVRKZLG&marketplace=FLIPKART&q=Crocs&store=osp&spotlightTagId=default_BestsellerId_osp&srno=s_1_9&otracker=search&fm=organic&iid=1555a9dd-3906-4161-aaab-7323525990f7.SNDFTHPHJCYAZK8D.SEARCH&ppt=None&ppn=None&ssid=puq73e9d8g0000001792467442970&qH=023f61b40dc02292&ov_redirect=true",
-      "source": "flipkart"
-    },
-    "flipkart:https://www.flipkart.com/crocs-baya-unisex-clogs/p/itmb0992287f64f6": {
-      "title": "CROCS Unisex Bayaband Clogs Sandal ₹1,214 ₹5,495 77% off Top Discount of the Sale CROCS Unisex Baya Clogs Sandal ₹2,122 ",
-      "price": 1214,
-      "url": "https://www.flipkart.com/crocs-baya-unisex-clogs/p/itmb0992287f64f6?pid=SNDENG9DSSZZJJC7&lid=LSTSNDENG9DSSZZJJC7Z4RIFS&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_10&otracker=search&fm=organic&iid=1555a9dd-3906-4161-aaab-7323525990f7.SNDENG9DSSZZJJC7.SEARCH&ppt=None&ppn=None&ssid=puq73e9d8g0000001792467442970&qH=023f61b40dc02292&ov_redirect=true",
-      "source": "flipkart"
-    },
-    "flipkart:https://www.flipkart.com/crocs-mellow-recovery-unisex-clogs/p/itm0fc954aa65ae6": {
-      "title": "CROCS Unisex Bayaband Clogs Sandal ₹1,214 ₹5,495 77% off Top Discount of the Sale CROCS Unisex Baya Clogs Sandal ₹2,122 ",
-      "price": 1214,
-      "url": "https://www.flipkart.com/crocs-mellow-recovery-unisex-clogs/p/itm0fc954aa65ae6?pid=SNDGYESQTSDEM3QM&lid=LSTSNDGYESQTSDEM3QMFJHBPA&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_11&otracker=search&fm=organic&iid=en_HtumBzCM2saxNrGzIifw3W3YyroVHekTahjV33YyiSkHero9fjZfTsBOzul5SuvB_34Q-4kjt0_0mRAuUFAqs8faEObO_V3A8jUmpF9SpYxGaA7pS05oKWVe4kaRuTVz&ppt=None&ppn=None&ssid=puq73e9d8g0000001792467442970&qH=023f61b40dc02292&ov_redirect=true",
-      "source": "flipkart"
-    },
-    "flipkart:https://www.flipkart.com/crocs-classic-unisex-clogs/p/itmf9zdfpq3updyn": {
-      "title": "CROCS Unisex Bayaband Clogs Sandal ₹1,214 ₹5,495 77% off Top Discount of the Sale CROCS Unisex Baya Clogs Sandal ₹2,122 ",
-      "price": 1214,
-      "url": "https://www.flipkart.com/crocs-classic-unisex-clogs/p/itmf9zdfpq3updyn?pid=SNDEBYX5XBVBJTFM&lid=LSTSNDEBYX5XBVBJTFM6HYKQR&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_12&otracker=search&fm=organic&iid=en_HtumBzCM2saxNrGzIifw3W3YyroVHekTahjV33YyiSmC7ymp54z1NFlMZ4I27J7cSKnM-ES4zyIUEK0vLvPds0NJa164bsgtWXQ5MtboeaZGaA7pS05oKWVe4kaRuTVz&ppt=None&ppn=None&ssid=puq73e9d8g0000001792467442970&qH=023f61b40dc02292&ov_redirect=true",
-      "source": "flipkart"
-    },
-    "flipkart:https://www.flipkart.com/crocs-off-grid-unisex-clogs/p/itm3cd96a848375f": {
-      "title": "CROCS Unisex Off Grid Clogs Sandal ₹2,101 ₹5,495 61% off Saver Deal CROCS Unisex Bayaband Clogs Sandal ₹2,292 ₹5,995 61%",
-      "price": 2101,
-      "url": "https://www.flipkart.com/crocs-off-grid-unisex-clogs/p/itm3cd96a848375f?pid=SNDGX8HPJ6KYHWTR&lid=LSTSNDGX8HPJ6KYHWTRUPIDHA&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_13&otracker=search&fm=organic&iid=1555a9dd-3906-4161-aaab-7323525990f7.SNDGX8HPJ6KYHWTR.SEARCH&ppt=None&ppn=None&ssid=puq73e9d8g0000001792467442970&qH=023f61b40dc02292&ov_redirect=true",
-      "source": "flipkart"
-    },
-    "flipkart:https://www.flipkart.com/crocs-bayaband-unisex-clogs/p/itm58d26a635d08c": {
-      "title": "CROCS Unisex Off Grid Clogs Sandal ₹2,101 ₹5,495 61% off Saver Deal CROCS Unisex Bayaband Clogs Sandal ₹2,292 ₹5,995 61%",
-      "price": 2101,
-      "url": "https://www.flipkart.com/crocs-bayaband-unisex-clogs/p/itm58d26a635d08c?pid=SNDFYEZSYMUFH3HA&lid=LSTSNDFYEZSYMUFH3HABM9XUL&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_14&otracker=search&fm=organic&iid=1555a9dd-3906-4161-aaab-7323525990f7.SNDFYEZSYMUFH3HA.SEARCH&ppt=None&ppn=None&ssid=puq73e9d8g0000001792467442970&qH=023f61b40dc02292&ov_redirect=true",
-      "source": "flipkart"
-    },
-    "flipkart:https://www.flipkart.com/crocs-unisex-essentials-slides/p/itm1b8b4a528015a": {
-      "title": "CROCS Unisex Off Grid Clogs Sandal ₹2,101 ₹5,495 61% off Saver Deal CROCS Unisex Bayaband Clogs Sandal ₹2,292 ₹5,995 61%",
-      "price": 2101,
-      "url": "https://www.flipkart.com/crocs-unisex-essentials-slides/p/itm1b8b4a528015a?pid=SFFGYPUGXGHGDHJR&lid=LSTSFFGYPUGXGHGDHJRNI9OYM&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_15&otracker=search&fm=organic&iid=1555a9dd-3906-4161-aaab-7323525990f7.SFFGYPUGXGHGDHJR.SEARCH&ppt=None&ppn=None&ssid=puq73e9d8g0000001792467442970&qH=023f61b40dc02292&ov_redirect=true",
-      "source": "flipkart"
-    },
-    "flipkart:https://www.flipkart.com/crocs-unisex-bayaband-slides/p/itm29a3f59e9267e": {
-      "title": "CROCS Unisex Off Grid Clogs Sandal ₹2,101 ₹5,495 61% off Saver Deal CROCS Unisex Bayaband Clogs Sandal ₹2,292 ₹5,995 61%",
-      "price": 2101,
-      "url": "https://www.flipkart.com/crocs-unisex-bayaband-slides/p/itm29a3f59e9267e?pid=SFFF3K7DMZJG4VJE&lid=LSTSFFF3K7DMZJG4VJEIJXELE&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_16&otracker=search&fm=organic&iid=1555a9dd-3906-4161-aaab-7323525990f7.SFFF3K7DMZJG4VJE.SEARCH&ppt=None&ppn=None&ssid=puq73e9d8g0000001792467442970&qH=023f61b40dc02292&ov_redirect=true",
-      "source": "flipkart"
-    },
-    "flipkart:https://www.flipkart.com/crocs-classic-unisex-clogs/p/itm116203ab8b03f": {
-      "title": "CROCS Unisex Classic Clogs Sandal ₹4,495 CROCS Unisex Clogs Sandal ₹7,495 CROCS Bayaband Unisex Slides ₹1,250 ₹3,495 64%",
-      "price": 4495,
-      "url": "https://www.flipkart.com/crocs-classic-unisex-clogs/p/itm116203ab8b03f?pid=SNDGHTZZQJ93NKYM&lid=LSTSNDGHTZZQJ93NKYMSY5VFO&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_17&otracker=search&fm=organic&iid=en_HtumBzCM2saxNrGzIifw3W3YyroVHekTahjV33YyiSkdrYaF0Dfwy65n2lUkSks_ncTpU12IU-dVwE9FIRg2gkQWLiPAYlXg7w0Kg1c_K0ZGaA7pS05oKWVe4kaRuTVz&ppt=None&ppn=None&ssid=puq73e9d8g0000001792467442970&qH=023f61b40dc02292&ov_redirect=true",
-      "source": "flipkart"
-    },
-    "flipkart:https://www.flipkart.com/crocs-unisex-clogs/p/itm7cf93b2130daa": {
-      "title": "CROCS Unisex Classic Clogs Sandal ₹4,495 CROCS Unisex Clogs Sandal ₹7,495 CROCS Bayaband Unisex Slides ₹1,250 ₹3,495 64%",
-      "price": 4495,
-      "url": "https://www.flipkart.com/crocs-unisex-clogs/p/itm7cf93b2130daa?pid=SNDHAH6UFAPFZJEA&lid=LSTSNDHAH6UFAPFZJEALJZYU3&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_18&otracker=search&fm=organic&iid=en_HtumBzCM2saxNrGzIifw3W3YyroVHekTahjV33YyiSlLDU2mFsikm135oC7rqKWrF-4Lb7Z6H3ZU3OixKjIjc-34f6xqY4heAXy6PJE-ML1GaA7pS05oKWVe4kaRuTVz&ppt=None&ppn=None&ssid=puq73e9d8g0000001792467442970&qH=023f61b40dc02292&ov_redirect=true",
-      "source": "flipkart"
-    },
-    "flipkart:https://www.flipkart.com/crocs-unisex-bayaband-slides/p/itmb3796caa170d6": {
-      "title": "CROCS Unisex Classic Clogs Sandal ₹4,495 CROCS Unisex Clogs Sandal ₹7,495 CROCS Bayaband Unisex Slides ₹1,250 ₹3,495 64%",
-      "price": 4495,
-      "url": "https://www.flipkart.com/crocs-unisex-bayaband-slides/p/itmb3796caa170d6?pid=SFFF3K7DVEKYKQJ7&lid=LSTSFFF3K7DVEKYKQJ7LOYZYT&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_19&otracker=search&fm=organic&iid=1555a9dd-3906-4161-aaab-7323525990f7.SFFF3K7DVEKYKQJ7.SEARCH&ppt=None&ppn=None&ssid=puq73e9d8g0000001792467442970&qH=023f61b40dc02292&ov_redirect=true",
+    "flipkart:https://www.flipkart.com/crocs-boys-girls-slip-on-flats/p/itm6893f742bf5a1": {
+      "title": "Currently unavailable CROCS Unisex Flip Flops ₹1,250 ₹3,495 64% off Top Discount of the Sale CROCS Slip-on Flats For Boy",
+      "price": 1250,
+      "url": "https://www.flipkart.com/crocs-boys-girls-slip-on-flats/p/itm6893f742bf5a1?pid=KSAGXHHCKWXGZHZH&lid=LSTKSAGXHHCKWXGZHZHV2FICO&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_6&otracker=search&fm=organic&iid=en_UY1RLnEpTFRVxzgFg8lLE1ZUAnOvZA0wwoLZR_1rwhF5_LzeStsheUgCMWhoExUphOatRlpHBO7BOuMu2-r-YdZYytA7TgD_NxZk6nIy0RtQQFvRx7jekLdpeF12jNp1&ppt=None&ppn=None&ssid=k1jfmoh8j40000001792513506805&qH=023f61b40dc02292&ov_redirect=true",
       "source": "flipkart"
     },
     "flipkart:https://www.flipkart.com/crocs-bayaband-unisex-clogs/p/itma35d4c76898d8": {
-      "title": "CROCS Unisex Classic Clogs Sandal ₹4,495 CROCS Unisex Clogs Sandal ₹7,495 CROCS Bayaband Unisex Slides ₹1,250 ₹3,495 64%",
-      "price": 4495,
-      "url": "https://www.flipkart.com/crocs-bayaband-unisex-clogs/p/itma35d4c76898d8?pid=SNDFWFFCGZ4N7FWB&lid=LSTSNDFWFFCGZ4N7FWBNMYVBW&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_20&otracker=search&fm=organic&iid=1555a9dd-3906-4161-aaab-7323525990f7.SNDFWFFCGZ4N7FWB.SEARCH&ppt=None&ppn=None&ssid=puq73e9d8g0000001792467442970&qH=023f61b40dc02292&ov_redirect=true",
-      "source": "flipkart"
-    },
-    "flipkart:https://www.flipkart.com/crocs-classic-unisex-clogs/p/itmb4fdb612e0707": {
-      "title": "CROCS Unisex Off Grid Clogs Sandal ₹2,101 ₹5,495 61% off CROCS Unisex Classic Clogs Sandal ₹4,495 CROCS Unisex Flip Flop",
-      "price": 2101,
-      "url": "https://www.flipkart.com/crocs-classic-unisex-clogs/p/itmb4fdb612e0707?pid=SNDGG9S4BGRZCRGZ&lid=LSTSNDGG9S4BGRZCRGZNKUU6W&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_22&otracker=search&fm=organic&iid=en_HtumBzCM2saxNrGzIifw3W3YyroVHekTahjV33YyiSkv8q7Gg1dqlVaXjN8m6yJ_d0hMjfFEfu-5VRUsa2DTpeexnxO-1TSn-Rc-g1ilaYZGaA7pS05oKWVe4kaRuTVz&ppt=None&ppn=None&ssid=puq73e9d8g0000001792467442970&qH=023f61b40dc02292&ov_redirect=true",
-      "source": "flipkart"
-    },
-    "flipkart:https://www.flipkart.com/crocs-unisex-flip-flops/p/itm9be771a5a0074": {
-      "title": "CROCS Unisex Off Grid Clogs Sandal ₹2,101 ₹5,495 61% off CROCS Unisex Classic Clogs Sandal ₹4,495 CROCS Unisex Flip Flop",
-      "price": 2101,
-      "url": "https://www.flipkart.com/crocs-unisex-flip-flops/p/itm9be771a5a0074?pid=SFFHGAB3PCBSSGXH&lid=LSTSFFHGAB3PCBSSGXHONQ05S&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_23&otracker=search&fm=organic&iid=1555a9dd-3906-4161-aaab-7323525990f7.SFFHGAB3PCBSSGXH.SEARCH&ppt=None&ppn=None&ssid=puq73e9d8g0000001792467442970&qH=023f61b40dc02292&ov_redirect=true",
-      "source": "flipkart"
-    },
-    "flipkart:https://www.flipkart.com/crocs-bayaband-unisex-clogs/p/itm45b9c1cf73af0": {
-      "title": "CROCS Unisex Off Grid Clogs Sandal ₹2,101 ₹5,495 61% off CROCS Unisex Classic Clogs Sandal ₹4,495 CROCS Unisex Flip Flop",
-      "price": 2101,
-      "url": "https://www.flipkart.com/crocs-bayaband-unisex-clogs/p/itm45b9c1cf73af0?pid=SNDG978FGGXGFGKB&lid=LSTSNDG978FGGXGFGKB2Y6RQN&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_24&otracker=search&fm=organic&iid=1555a9dd-3906-4161-aaab-7323525990f7.SNDG978FGGXGFGKB.SEARCH&ppt=None&ppn=None&ssid=puq73e9d8g0000001792467442970&qH=023f61b40dc02292&ov_redirect=true",
-      "source": "flipkart"
-    },
-    "flipkart:https://www.flipkart.com/crocs-baya-platform-women-clogs/p/itm2483579eadcc0": {
-      "title": "CROCS Women Baya Platform Clogs Sandal ₹2,547 ₹5,995 57% off Top Discount of the Sale CROCS Unisex Baya Clogs Sandal ₹3,",
-      "price": 2547,
-      "url": "https://www.flipkart.com/crocs-baya-platform-women-clogs/p/itm2483579eadcc0?pid=SNDGWT2QXGZY66RG&lid=LSTSNDGWT2QXGZY66RGHB954D&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_25&otracker=search&fm=organic&iid=1555a9dd-3906-4161-aaab-7323525990f7.SNDGWT2QXGZY66RG.SEARCH&ppt=None&ppn=None&ssid=puq73e9d8g0000001792467442970&qH=023f61b40dc02292&ov_redirect=true",
-      "source": "flipkart"
-    },
-    "flipkart:https://www.flipkart.com/crocs-baya-unisex-clogs/p/itmee8fa0f30175f": {
-      "title": "CROCS Women Baya Platform Clogs Sandal ₹2,547 ₹5,995 57% off Top Discount of the Sale CROCS Unisex Baya Clogs Sandal ₹3,",
-      "price": 2547,
-      "url": "https://www.flipkart.com/crocs-baya-unisex-clogs/p/itmee8fa0f30175f?pid=SNDGPDTVT34X5BPA&lid=LSTSNDGPDTVT34X5BPAHJF0VT&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_26&otracker=search&fm=organic&iid=1555a9dd-3906-4161-aaab-7323525990f7.SNDGPDTVT34X5BPA.SEARCH&ppt=None&ppn=None&ssid=puq73e9d8g0000001792467442970&qH=023f61b40dc02292&ov_redirect=true",
-      "source": "flipkart"
-    },
-    "flipkart:https://www.flipkart.com/crocs-adult-literide-motion-unisex-clogs/p/itmcc3d8a803c41e": {
-      "title": "CROCS Women Baya Platform Clogs Sandal ₹2,547 ₹5,995 57% off Top Discount of the Sale CROCS Unisex Baya Clogs Sandal ₹3,",
-      "price": 2547,
-      "url": "https://www.flipkart.com/crocs-adult-literide-motion-unisex-clogs/p/itmcc3d8a803c41e?pid=SNDH6YX6UETHQNN5&lid=LSTSNDH6YX6UETHQNN52FVE0N&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_27&otracker=search&fm=organic&iid=en_HtumBzCM2saxNrGzIifw3W3YyroVHekTahjV33YyiSl3th9KDJAXyaMGsMUsogPaAMGWPekeyoxN7bpQ0mQ9BbeRHDW9tXPSbecKp98IkfdGaA7pS05oKWVe4kaRuTVz&ppt=None&ppn=None&ssid=puq73e9d8g0000001792467442970&qH=023f61b40dc02292&ov_redirect=true",
-      "source": "flipkart"
-    },
-    "flipkart:https://www.flipkart.com/crocs-classic-unisex-clogs/p/itmf9zdfhw3sqxfc": {
-      "title": "CROCS Women Baya Platform Clogs Sandal ₹2,547 ₹5,995 57% off Top Discount of the Sale CROCS Unisex Baya Clogs Sandal ₹3,",
-      "price": 2547,
-      "url": "https://www.flipkart.com/crocs-classic-unisex-clogs/p/itmf9zdfhw3sqxfc?pid=SNDEBFXDYEQCNSTP&lid=LSTSNDEBFXDYEQCNSTPUFFMVD&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_28&otracker=search&fm=organic&iid=en_HtumBzCM2saxNrGzIifw3W3YyroVHekTahjV33YyiSkVGnt1LWCCvB9203i4Z7IWjIN_6KdQ4nq8JX-ucoYnjZjcT_VCRvSeoqSGEroalFdGaA7pS05oKWVe4kaRuTVz&ppt=None&ppn=None&ssid=puq73e9d8g0000001792467442970&qH=023f61b40dc02292&ov_redirect=true",
-      "source": "flipkart"
-    },
-    "flipkart:https://www.flipkart.com/crocs-baya-unisex-clogs/p/itmf3ww5cyfkfam7": {
-      "title": "CROCS Unisex Baya Clogs Sandal ₹1,277 ₹4,495 71% off Top Discount of the Sale CROCS Unisex Bayaband Clogs Sandal ₹2,292 ",
-      "price": 1277,
-      "url": "https://www.flipkart.com/crocs-baya-unisex-clogs/p/itmf3ww5cyfkfam7?pid=SNDEAVE3YJHBNSBP&lid=LSTSNDEAVE3YJHBNSBP9QCETX&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_29&otracker=search&fm=organic&iid=1555a9dd-3906-4161-aaab-7323525990f7.SNDEAVE3YJHBNSBP.SEARCH&ppt=None&ppn=None&ssid=puq73e9d8g0000001792467442970&qH=023f61b40dc02292&ov_redirect=true",
-      "source": "flipkart"
-    },
-    "flipkart:https://www.flipkart.com/crocs-bayaband-unisex-clogs/p/itmfgpmtwf4uznzh": {
-      "title": "CROCS Unisex Baya Clogs Sandal ₹1,277 ₹4,495 71% off Top Discount of the Sale CROCS Unisex Bayaband Clogs Sandal ₹2,292 ",
-      "price": 1277,
-      "url": "https://www.flipkart.com/crocs-bayaband-unisex-clogs/p/itmfgpmtwf4uznzh?pid=SNDFYEZSCDXHEJX6&lid=LSTSNDFYEZSCDXHEJX6JXMYF3&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_30&otracker=search&fm=organic&iid=1555a9dd-3906-4161-aaab-7323525990f7.SNDFYEZSCDXHEJX6.SEARCH&ppt=None&ppn=None&ssid=puq73e9d8g0000001792467442970&qH=023f61b40dc02292&ov_redirect=true",
-      "source": "flipkart"
-    },
-    "flipkart:https://www.flipkart.com/crocs-unisex-clogs/p/itm79d2e20bbea8d": {
-      "title": "CROCS Unisex Baya Clogs Sandal ₹1,277 ₹4,495 71% off Top Discount of the Sale CROCS Unisex Bayaband Clogs Sandal ₹2,292 ",
-      "price": 1277,
-      "url": "https://www.flipkart.com/crocs-unisex-clogs/p/itm79d2e20bbea8d?pid=SNDHHESEZJS5K6SF&lid=LSTSNDHHESEZJS5K6SFJLHMWG&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_31&otracker=search&fm=organic&iid=en_HtumBzCM2saxNrGzIifw3W3YyroVHekTahjV33YyiSlAQ_33clzJk_0UMILBEwpavhqUGY0YcLRvq4kFdeNiEeWjwZ3wJIqA-tiaxJ4q20NGaA7pS05oKWVe4kaRuTVz&ppt=None&ppn=None&ssid=puq73e9d8g0000001792467442970&qH=023f61b40dc02292&ov_redirect=true",
-      "source": "flipkart"
-    },
-    "flipkart:https://www.flipkart.com/crocs-classic-unisex-clogs/p/itmf9zdfgujvsptg": {
-      "title": "CROCS Unisex Baya Clogs Sandal ₹1,277 ₹4,495 71% off Top Discount of the Sale CROCS Unisex Bayaband Clogs Sandal ₹2,292 ",
-      "price": 1277,
-      "url": "https://www.flipkart.com/crocs-classic-unisex-clogs/p/itmf9zdfgujvsptg?pid=SNDEF23WYDAYYENP&lid=LSTSNDEF23WYDAYYENPIP26LV&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_32&otracker=search&fm=organic&iid=en_HtumBzCM2saxNrGzIifw3W3YyroVHekTahjV33YyiSlmj1Ij4yILZjew-jJXHks0ejDseEeL8zCiOq2LOInszjZV6dMnDvKyo42I_lYNLfZGaA7pS05oKWVe4kaRuTVz&ppt=None&ppn=None&ssid=puq73e9d8g0000001792467442970&qH=023f61b40dc02292&ov_redirect=true",
-      "source": "flipkart"
-    },
-    "flipkart:https://www.flipkart.com/crocs-unisex-bayaband-flip-flops/p/itm6e5985ac62659": {
-      "title": "CROCS Bayaband Flip Unisex Flip Flops ₹1,250 ₹3,495 64% off Top Discount of the Sale CROCS Women Flip Flops ₹1,152 ₹2,19",
+      "title": "Currently unavailable CROCS Unisex Flip Flops ₹1,250 ₹3,495 64% off Top Discount of the Sale CROCS Slip-on Flats For Boy",
       "price": 1250,
-      "url": "https://www.flipkart.com/crocs-unisex-bayaband-flip-flops/p/itm6e5985ac62659?pid=SFFF3K7DUXVFRAUW&lid=LSTSFFF3K7DUXVFRAUWUXRWBO&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_33&otracker=search&fm=organic&iid=1555a9dd-3906-4161-aaab-7323525990f7.SFFF3K7DUXVFRAUW.SEARCH&ppt=None&ppn=None&ssid=puq73e9d8g0000001792467442970&qH=023f61b40dc02292&ov_redirect=true",
-      "source": "flipkart"
-    },
-    "flipkart:https://www.flipkart.com/crocs-women-flip-flops/p/itm8040701f39675": {
-      "title": "CROCS Bayaband Flip Unisex Flip Flops ₹1,250 ₹3,495 64% off Top Discount of the Sale CROCS Women Flip Flops ₹1,152 ₹2,19",
-      "price": 1250,
-      "url": "https://www.flipkart.com/crocs-women-flip-flops/p/itm8040701f39675?pid=SFFHGA9GJGGUHG6R&lid=LSTSFFHGA9GJGGUHG6R1B82YH&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_34&otracker=search&fm=organic&iid=1555a9dd-3906-4161-aaab-7323525990f7.SFFHGA9GJGGUHG6R.SEARCH&ppt=None&ppn=None&ssid=puq73e9d8g0000001792467442970&qH=023f61b40dc02292&ov_redirect=true",
-      "source": "flipkart"
-    },
-    "flipkart:https://www.flipkart.com/crocs-women-capri-flip-flops/p/itmc19165a827820": {
-      "title": "CROCS Bayaband Flip Unisex Flip Flops ₹1,250 ₹3,495 64% off Top Discount of the Sale CROCS Women Flip Flops ₹1,152 ₹2,19",
-      "price": 1250,
-      "url": "https://www.flipkart.com/crocs-women-capri-flip-flops/p/itmc19165a827820?pid=SFFEQYYMVJBCZAQQ&lid=LSTSFFEQYYMVJBCZAQQVGAMBX&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_35&otracker=search&fm=organic&iid=1555a9dd-3906-4161-aaab-7323525990f7.SFFEQYYMVJBCZAQQ.SEARCH&ppt=None&ppn=None&ssid=puq73e9d8g0000001792467442970&qH=023f61b40dc02292&ov_redirect=true",
-      "source": "flipkart"
-    },
-    "flipkart:https://www.flipkart.com/crocs-offroad-sport-unisex-clogs/p/itm11ababec77f9e": {
-      "title": "CROCS Bayaband Flip Unisex Flip Flops ₹1,250 ₹3,495 64% off Top Discount of the Sale CROCS Women Flip Flops ₹1,152 ₹2,19",
-      "price": 1250,
-      "url": "https://www.flipkart.com/crocs-offroad-sport-unisex-clogs/p/itm11ababec77f9e?pid=SNDGX8HPXU78ZGVU&lid=LSTSNDGX8HPXU78ZGVUFAZFPV&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_36&otracker=search&fm=organic&iid=1555a9dd-3906-4161-aaab-7323525990f7.SNDGX8HPXU78ZGVU.SEARCH&ppt=None&ppn=None&ssid=puq73e9d8g0000001792467442970&qH=023f61b40dc02292&ov_redirect=true",
-      "source": "flipkart"
-    },
-    "flipkart:https://www.flipkart.com/crocs-classic-unisex-clogs/p/itme1da5a07aef64": {
-      "title": "CROCS Unisex Classic Clogs Sandal ₹4,495 CROCS Sling Back Clogs For Boys & Girls ₹4,495 CROCS Bayaband Slide Unisex Slid",
-      "price": 4495,
-      "url": "https://www.flipkart.com/crocs-classic-unisex-clogs/p/itme1da5a07aef64?pid=SNDG54HF3TW8FBGW&lid=LSTSNDG54HF3TW8FBGW9ETPYS&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_37&otracker=search&fm=organic&iid=en_HtumBzCM2saxNrGzIifw3W3YyroVHekTahjV33YyiSkrbm3t6km8C0VWCIu3KusycDPzyi3mwlJy4tbqvcxWGt9jAfazp5ysYTlRvEGTFg5GaA7pS05oKWVe4kaRuTVz&ppt=None&ppn=None&ssid=puq73e9d8g0000001792467442970&qH=023f61b40dc02292&ov_redirect=true",
-      "source": "flipkart"
-    },
-    "flipkart:https://www.flipkart.com/crocs-boys-girls-sling-back-clogs/p/itm1474a416916b9": {
-      "title": "CROCS Unisex Classic Clogs Sandal ₹4,495 CROCS Sling Back Clogs For Boys & Girls ₹4,495 CROCS Bayaband Slide Unisex Slid",
-      "price": 4495,
-      "url": "https://www.flipkart.com/crocs-boys-girls-sling-back-clogs/p/itm1474a416916b9?pid=KSAG976GT3UKZX7E&lid=LSTKSAG976GT3UKZX7ETIWJ9R&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_38&otracker=search&fm=organic&iid=en_HtumBzCM2saxNrGzIifw3W3YyroVHekTahjV33YyiSmqGMtei5rV2RPx7VtivKkBof675tHZgpvaFDbS7aKTHn9aoHYy1Ce1969hWJjAvoFGaA7pS05oKWVe4kaRuTVz&ppt=None&ppn=None&ssid=puq73e9d8g0000001792467442970&qH=023f61b40dc02292&ov_redirect=true",
+      "url": "https://www.flipkart.com/crocs-bayaband-unisex-clogs/p/itma35d4c76898d8?pid=SNDFTHZQVEBRFKTX&lid=LSTSNDFTHZQVEBRFKTXZ0OMOC&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_7&otracker=search&fm=organic&iid=4d36acc0-8686-457a-b807-de97f18633f7.SNDFTHZQVEBRFKTX.SEARCH&ppt=None&ppn=None&ssid=k1jfmoh8j40000001792513506805&qH=023f61b40dc02292&ov_redirect=true",
       "source": "flipkart"
     },
     "flipkart:https://www.flipkart.com/crocs-unisex-bayaband-slide-slides/p/itm59df59a3f9220": {
-      "title": "CROCS Unisex Classic Clogs Sandal ₹4,495 CROCS Sling Back Clogs For Boys & Girls ₹4,495 CROCS Bayaband Slide Unisex Slid",
-      "price": 4495,
-      "url": "https://www.flipkart.com/crocs-unisex-bayaband-slide-slides/p/itm59df59a3f9220?pid=SFFF3K7DAG3V6H5B&lid=LSTSFFF3K7DAG3V6H5BVDSKPF&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_39&otracker=search&fm=organic&iid=1555a9dd-3906-4161-aaab-7323525990f7.SFFF3K7DAG3V6H5B.SEARCH&ppt=None&ppn=None&ssid=puq73e9d8g0000001792467442970&qH=023f61b40dc02292&ov_redirect=true",
+      "title": "CROCS Bayaband Slide Unisex Slides ₹1,250 ₹3,495 64% off Top Discount of the Sale CROCS Unisex Bayaband Clogs Sandal ₹2,",
+      "price": 1250,
+      "url": "https://www.flipkart.com/crocs-unisex-bayaband-slide-slides/p/itm59df59a3f9220?pid=SFFF3K7D2ZKTHHZT&lid=LSTSFFF3K7D2ZKTHHZT8IXCTE&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_9&otracker=search&fm=organic&iid=4d36acc0-8686-457a-b807-de97f18633f7.SFFF3K7D2ZKTHHZT.SEARCH&ppt=None&ppn=None&ssid=k1jfmoh8j40000001792513506805&qH=023f61b40dc02292&ov_redirect=true",
       "source": "flipkart"
     },
-    "flipkart:https://www.flipkart.com/crocs-unisex-essentials-slides/p/itm5ebe81393ebaa": {
-      "title": "CROCS Unisex Classic Clogs Sandal ₹4,495 CROCS Sling Back Clogs For Boys & Girls ₹4,495 CROCS Bayaband Slide Unisex Slid",
-      "price": 4495,
-      "url": "https://www.flipkart.com/crocs-unisex-essentials-slides/p/itm5ebe81393ebaa?pid=SFFGYPUGJJSCSPFV&lid=LSTSFFGYPUGJJSCSPFVARYY50&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_40&otracker=search&fm=organic&iid=1555a9dd-3906-4161-aaab-7323525990f7.SFFGYPUGJJSCSPFV.SEARCH&ppt=None&ppn=None&ssid=puq73e9d8g0000001792467442970&qH=023f61b40dc02292&ov_redirect=true",
+    "flipkart:https://www.flipkart.com/crocs-bayaband-unisex-clogs/p/itm58d26a635d08c": {
+      "title": "CROCS Bayaband Slide Unisex Slides ₹1,250 ₹3,495 64% off Top Discount of the Sale CROCS Unisex Bayaband Clogs Sandal ₹2,",
+      "price": 1250,
+      "url": "https://www.flipkart.com/crocs-bayaband-unisex-clogs/p/itm58d26a635d08c?pid=SNDFYEZSYMUFH3HA&lid=LSTSNDFYEZSYMUFH3HABM9XUL&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_10&otracker=search&fm=organic&iid=4d36acc0-8686-457a-b807-de97f18633f7.SNDFYEZSYMUFH3HA.SEARCH&ppt=None&ppn=None&ssid=k1jfmoh8j40000001792513506805&qH=023f61b40dc02292&ov_redirect=true",
+      "source": "flipkart"
+    },
+    "flipkart:https://www.flipkart.com/crocs-unisex-bayaband-flip-flops/p/itmfc3978d0f2926": {
+      "title": "CROCS Bayaband Slide Unisex Slides ₹1,250 ₹3,495 64% off Top Discount of the Sale CROCS Unisex Bayaband Clogs Sandal ₹2,",
+      "price": 1250,
+      "url": "https://www.flipkart.com/crocs-unisex-bayaband-flip-flops/p/itmfc3978d0f2926?pid=SFFF3K7DNYVQNXRK&lid=LSTSFFF3K7DNYVQNXRKHBX4SX&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_11&otracker=search&fm=organic&iid=en_UY1RLnEpTFRVxzgFg8lLE1ZUAnOvZA0wwoLZR_1rwhHl-RHEJj-_gxQw5yyDN3996Aat3T4VOaL8DJgfbVQyo9LVQtirBLtur_GKvy4AGglQQFvRx7jekLdpeF12jNp1&ppt=None&ppn=None&ssid=k1jfmoh8j40000001792513506805&qH=023f61b40dc02292&ov_redirect=true",
+      "source": "flipkart"
+    },
+    "flipkart:https://www.flipkart.com/crocs-boca-bling-women-casual/p/itm6ddf6a2b40ccd": {
+      "title": "CROCS Bayaband Slide Unisex Slides ₹1,250 ₹3,495 64% off Top Discount of the Sale CROCS Unisex Bayaband Clogs Sandal ₹2,",
+      "price": 1250,
+      "url": "https://www.flipkart.com/crocs-boca-bling-women-casual/p/itm6ddf6a2b40ccd?pid=SNDGYP5ZDAXYXPMJ&lid=LSTSNDGYP5ZDAXYXPMJ2MOWKO&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_12&otracker=search&fm=organic&iid=en_UY1RLnEpTFRVxzgFg8lLE1ZUAnOvZA0wwoLZR_1rwhG7eccyqjl1m_c_mJnj7URlxshGnI7AxlOW8FMoo4-7RKiKWmP2TWMclxrWVXQQy8FQQFvRx7jekLdpeF12jNp1&ppt=None&ppn=None&ssid=k1jfmoh8j40000001792513506805&qH=023f61b40dc02292&ov_redirect=true",
+      "source": "flipkart"
+    },
+    "flipkart:https://www.flipkart.com/crocs-bayaband-unisex-clogs/p/itm9b535a5307c50": {
+      "title": "CROCS Unisex Bayaband Clogs Sandal ₹1,214 ₹5,495 77% off Top Discount of the Sale CROCS Bayaband Unisex Slides ₹1,250 ₹3",
+      "price": 1214,
+      "url": "https://www.flipkart.com/crocs-bayaband-unisex-clogs/p/itm9b535a5307c50?pid=SNDFTHPHJCYAZK8D&lid=LSTSNDFTHPHJCYAZK8DVRKZLG&marketplace=FLIPKART&q=Crocs&store=osp&spotlightTagId=default_BestsellerId_osp&srno=s_1_13&otracker=search&fm=organic&iid=4d36acc0-8686-457a-b807-de97f18633f7.SNDFTHPHJCYAZK8D.SEARCH&ppt=None&ppn=None&ssid=k1jfmoh8j40000001792513506805&qH=023f61b40dc02292&ov_redirect=true",
+      "source": "flipkart"
+    },
+    "flipkart:https://www.flipkart.com/crocs-unisex-bayaband-slides/p/itmb3796caa170d6": {
+      "title": "CROCS Unisex Bayaband Clogs Sandal ₹1,214 ₹5,495 77% off Top Discount of the Sale CROCS Bayaband Unisex Slides ₹1,250 ₹3",
+      "price": 1214,
+      "url": "https://www.flipkart.com/crocs-unisex-bayaband-slides/p/itmb3796caa170d6?pid=SFFF3K7DVEKYKQJ7&lid=LSTSFFF3K7DVEKYKQJ7LOYZYT&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_14&otracker=search&fm=organic&iid=4d36acc0-8686-457a-b807-de97f18633f7.SFFF3K7DVEKYKQJ7.SEARCH&ppt=None&ppn=None&ssid=k1jfmoh8j40000001792513506805&qH=023f61b40dc02292&ov_redirect=true",
+      "source": "flipkart"
+    },
+    "flipkart:https://www.flipkart.com/crocs-bayaband-unisex-clogs/p/itmfgpmtwf4uznzh": {
+      "title": "CROCS Unisex Bayaband Clogs Sandal ₹1,214 ₹5,495 77% off Top Discount of the Sale CROCS Bayaband Unisex Slides ₹1,250 ₹3",
+      "price": 1214,
+      "url": "https://www.flipkart.com/crocs-bayaband-unisex-clogs/p/itmfgpmtwf4uznzh?pid=SNDFYEZSYYB6FDPT&lid=LSTSNDFYEZSYYB6FDPTITMSUT&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_15&otracker=search&fm=organic&iid=4d36acc0-8686-457a-b807-de97f18633f7.SNDFYEZSYYB6FDPT.SEARCH&ppt=None&ppn=None&ssid=k1jfmoh8j40000001792513506805&qH=023f61b40dc02292&ov_redirect=true",
+      "source": "flipkart"
+    },
+    "flipkart:https://www.flipkart.com/crocs-baya-platform-women-clogs/p/itm2483579eadcc0": {
+      "title": "CROCS Unisex Bayaband Clogs Sandal ₹1,214 ₹5,495 77% off Top Discount of the Sale CROCS Bayaband Unisex Slides ₹1,250 ₹3",
+      "price": 1214,
+      "url": "https://www.flipkart.com/crocs-baya-platform-women-clogs/p/itm2483579eadcc0?pid=SNDGWT2QBGDYYAQA&lid=LSTSNDGWT2QBGDYYAQAMO9FJU&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_16&otracker=search&fm=organic&iid=4d36acc0-8686-457a-b807-de97f18633f7.SNDGWT2QBGDYYAQA.SEARCH&ppt=None&ppn=None&ssid=k1jfmoh8j40000001792513506805&qH=023f61b40dc02292&ov_redirect=true",
+      "source": "flipkart"
+    },
+    "flipkart:https://www.flipkart.com/crocs-men-clogs/p/itmd0be2677cd4e7": {
+      "title": "CROCS Men Clogs Sandal ₹3,495 CROCS Slip-on Flats For Boys & Girls ₹3,995 CROCS Men Classic Clogs Sandal ₹1,079 ₹3,995 7",
+      "price": 3495,
+      "url": "https://www.flipkart.com/crocs-men-clogs/p/itmd0be2677cd4e7?pid=SNDHGDPRZFHTPHEV&lid=LSTSNDHGDPRZFHTPHEVGSIQV5&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_17&otracker=search&fm=organic&iid=en_UY1RLnEpTFRVxzgFg8lLE1ZUAnOvZA0wwoLZR_1rwhH2RHANug92qxPFQJazbc6xsRFVhDLmcDoTfQSoYWGtrG_kxSBoyxrgRq4WOHWGWe1QQFvRx7jekLdpeF12jNp1&ppt=None&ppn=None&ssid=k1jfmoh8j40000001792513506805&qH=023f61b40dc02292&ov_redirect=true",
+      "source": "flipkart"
+    },
+    "flipkart:https://www.flipkart.com/crocs-boys-girls-slip-on-flats/p/itmf17c041aaa102": {
+      "title": "CROCS Men Clogs Sandal ₹3,495 CROCS Slip-on Flats For Boys & Girls ₹3,995 CROCS Men Classic Clogs Sandal ₹1,079 ₹3,995 7",
+      "price": 3495,
+      "url": "https://www.flipkart.com/crocs-boys-girls-slip-on-flats/p/itmf17c041aaa102?pid=KSAGXAUM2HB5GSDT&lid=LSTKSAGXAUM2HB5GSDTJGJ2DR&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_18&otracker=search&fm=organic&iid=en_UY1RLnEpTFRVxzgFg8lLE1ZUAnOvZA0wwoLZR_1rwhF5HyPCM_HaEOqltHZvs2FnMn25wycxM1UZMgK-OQ5XrabP8LDsoBddKJf9aHcSLIFQQFvRx7jekLdpeF12jNp1&ppt=None&ppn=None&ssid=k1jfmoh8j40000001792513506805&qH=023f61b40dc02292&ov_redirect=true",
+      "source": "flipkart"
+    },
+    "flipkart:https://www.flipkart.com/crocs-classic-men-clogs/p/itmf0626321c1f1f": {
+      "title": "CROCS Men Clogs Sandal ₹3,495 CROCS Slip-on Flats For Boys & Girls ₹3,995 CROCS Men Classic Clogs Sandal ₹1,079 ₹3,995 7",
+      "price": 3495,
+      "url": "https://www.flipkart.com/crocs-classic-men-clogs/p/itmf0626321c1f1f?pid=SNDFMQ4PZEFUSJVP&lid=LSTSNDFMQ4PZEFUSJVPCB30PS&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_19&otracker=search&fm=organic&iid=4d36acc0-8686-457a-b807-de97f18633f7.SNDFMQ4PZEFUSJVP.SEARCH&ppt=None&ppn=None&ssid=k1jfmoh8j40000001792513506805&qH=023f61b40dc02292&ov_redirect=true",
+      "source": "flipkart"
+    },
+    "flipkart:https://www.flipkart.com/crocs-unisex-bayaband-slides/p/itm29a3f59e9267e": {
+      "title": "CROCS Men Clogs Sandal ₹3,495 CROCS Slip-on Flats For Boys & Girls ₹3,995 CROCS Men Classic Clogs Sandal ₹1,079 ₹3,995 7",
+      "price": 3495,
+      "url": "https://www.flipkart.com/crocs-unisex-bayaband-slides/p/itm29a3f59e9267e?pid=SFFF3K7DWHSQQCAN&lid=LSTSFFF3K7DWHSQQCANVJTIYE&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_20&otracker=search&fm=organic&iid=4d36acc0-8686-457a-b807-de97f18633f7.SFFF3K7DWHSQQCAN.SEARCH&ppt=None&ppn=None&ssid=k1jfmoh8j40000001792513506805&qH=023f61b40dc02292&ov_redirect=true",
+      "source": "flipkart"
+    },
+    "flipkart:https://www.flipkart.com/crocs-men-clogs/p/itma887fd4adb0ac": {
+      "title": "CROCS Men Clogs Sandal ₹3,495 CROCS Unisex Off Grid Clogs Sandal ₹2,101 ₹5,495 61% off CROCS Women Flip Flops ₹1,152 ₹2,",
+      "price": 3495,
+      "url": "https://www.flipkart.com/crocs-men-clogs/p/itma887fd4adb0ac?pid=SNDHGDPRMDHXEBBB&lid=LSTSNDHGDPRMDHXEBBBWW9G7W&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_21&otracker=search&fm=organic&iid=en_UY1RLnEpTFRVxzgFg8lLE1ZUAnOvZA0wwoLZR_1rwhHONsvIXmsgSBrUhHqKk2LVQFOGmkqVAW6Tj_41a2Kd4eh7AsmiHMUetPpCGiWtO8xQQFvRx7jekLdpeF12jNp1&ppt=None&ppn=None&ssid=k1jfmoh8j40000001792513506805&qH=023f61b40dc02292&ov_redirect=true",
+      "source": "flipkart"
+    },
+    "flipkart:https://www.flipkart.com/crocs-off-grid-unisex-clogs/p/itm3cd96a848375f": {
+      "title": "CROCS Men Clogs Sandal ₹3,495 CROCS Unisex Off Grid Clogs Sandal ₹2,101 ₹5,495 61% off CROCS Women Flip Flops ₹1,152 ₹2,",
+      "price": 3495,
+      "url": "https://www.flipkart.com/crocs-off-grid-unisex-clogs/p/itm3cd96a848375f?pid=SNDGX8HPJ6KYHWTR&lid=LSTSNDGX8HPJ6KYHWTRUPIDHA&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_22&otracker=search&fm=organic&iid=4d36acc0-8686-457a-b807-de97f18633f7.SNDGX8HPJ6KYHWTR.SEARCH&ppt=None&ppn=None&ssid=k1jfmoh8j40000001792513506805&qH=023f61b40dc02292&ov_redirect=true",
+      "source": "flipkart"
+    },
+    "flipkart:https://www.flipkart.com/crocs-women-flip-flops/p/itm8040701f39675": {
+      "title": "CROCS Men Clogs Sandal ₹3,495 CROCS Unisex Off Grid Clogs Sandal ₹2,101 ₹5,495 61% off CROCS Women Flip Flops ₹1,152 ₹2,",
+      "price": 3495,
+      "url": "https://www.flipkart.com/crocs-women-flip-flops/p/itm8040701f39675?pid=SFFHGA9GJGGUHG6R&lid=LSTSFFHGA9GJGGUHG6R1B82YH&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_23&otracker=search&fm=organic&iid=4d36acc0-8686-457a-b807-de97f18633f7.SFFHGA9GJGGUHG6R.SEARCH&ppt=None&ppn=None&ssid=k1jfmoh8j40000001792513506805&qH=023f61b40dc02292&ov_redirect=true",
+      "source": "flipkart"
+    },
+    "flipkart:https://www.flipkart.com/crocs-baya-unisex-clogs/p/itmfbtz6gszsmsha": {
+      "title": "CROCS Men Clogs Sandal ₹3,495 CROCS Unisex Off Grid Clogs Sandal ₹2,101 ₹5,495 61% off CROCS Women Flip Flops ₹1,152 ₹2,",
+      "price": 3495,
+      "url": "https://www.flipkart.com/crocs-baya-unisex-clogs/p/itmfbtz6gszsmsha?pid=SNDEAVE3X6TYHH4E&lid=LSTSNDEAVE3X6TYHH4EEAQKAN&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_24&otracker=search&fm=organic&iid=4d36acc0-8686-457a-b807-de97f18633f7.SNDEAVE3X6TYHH4E.SEARCH&ppt=None&ppn=None&ssid=k1jfmoh8j40000001792513506805&qH=023f61b40dc02292&ov_redirect=true",
+      "source": "flipkart"
+    },
+    "flipkart:https://www.flipkart.com/crocs-unisex-bayaband-flip-flops/p/itm6e5985ac62659": {
+      "title": "CROCS Bayaband Flip Unisex Flip Flops ₹1,250 ₹3,495 64% off Top Discount of the Sale CROCS Unisex Baya Clogs Sandal ₹3,4",
+      "price": 1250,
+      "url": "https://www.flipkart.com/crocs-unisex-bayaband-flip-flops/p/itm6e5985ac62659?pid=SFFF3K7DUXVFRAUW&lid=LSTSFFF3K7DUXVFRAUWUXRWBO&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_25&otracker=search&fm=organic&iid=4d36acc0-8686-457a-b807-de97f18633f7.SFFF3K7DUXVFRAUW.SEARCH&ppt=None&ppn=None&ssid=k1jfmoh8j40000001792513506805&qH=023f61b40dc02292&ov_redirect=true",
+      "source": "flipkart"
+    },
+    "flipkart:https://www.flipkart.com/crocs-baya-unisex-clogs/p/itmee8fa0f30175f": {
+      "title": "CROCS Bayaband Flip Unisex Flip Flops ₹1,250 ₹3,495 64% off Top Discount of the Sale CROCS Unisex Baya Clogs Sandal ₹3,4",
+      "price": 1250,
+      "url": "https://www.flipkart.com/crocs-baya-unisex-clogs/p/itmee8fa0f30175f?pid=SNDGPDTV2BKEZFXZ&lid=LSTSNDGPDTV2BKEZFXZBNUQLQ&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_26&otracker=search&fm=organic&iid=4d36acc0-8686-457a-b807-de97f18633f7.SNDGPDTV2BKEZFXZ.SEARCH&ppt=None&ppn=None&ssid=k1jfmoh8j40000001792513506805&qH=023f61b40dc02292&ov_redirect=true",
+      "source": "flipkart"
+    },
+    "flipkart:https://www.flipkart.com/crocs-baya-unisex-clogs/p/itmf3ww5cyfkfam7": {
+      "title": "CROCS Bayaband Flip Unisex Flip Flops ₹1,250 ₹3,495 64% off Top Discount of the Sale CROCS Unisex Baya Clogs Sandal ₹3,4",
+      "price": 1250,
+      "url": "https://www.flipkart.com/crocs-baya-unisex-clogs/p/itmf3ww5cyfkfam7?pid=SNDEAVE3YJHBNSBP&lid=LSTSNDEAVE3YJHBNSBP9QCETX&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_27&otracker=search&fm=organic&iid=4d36acc0-8686-457a-b807-de97f18633f7.SNDEAVE3YJHBNSBP.SEARCH&ppt=None&ppn=None&ssid=k1jfmoh8j40000001792513506805&qH=023f61b40dc02292&ov_redirect=true",
+      "source": "flipkart"
+    },
+    "flipkart:https://www.flipkart.com/crocs-unisex-baya-ii-slides/p/itme963d6b77e390": {
+      "title": "CROCS Bayaband Flip Unisex Flip Flops ₹1,250 ₹3,495 64% off Top Discount of the Sale CROCS Unisex Baya Clogs Sandal ₹3,4",
+      "price": 1250,
+      "url": "https://www.flipkart.com/crocs-unisex-baya-ii-slides/p/itme963d6b77e390?pid=SFFGHTNKAUQHVCBG&lid=LSTSFFGHTNKAUQHVCBGATYBRN&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_28&otracker=search&fm=organic&iid=4d36acc0-8686-457a-b807-de97f18633f7.SFFGHTNKAUQHVCBG.SEARCH&ppt=None&ppn=None&ssid=k1jfmoh8j40000001792513506805&qH=023f61b40dc02292&ov_redirect=true",
+      "source": "flipkart"
+    },
+    "flipkart:https://www.flipkart.com/crocs-unisex-essentials-slides/p/itm1b8b4a528015a": {
+      "title": "CROCS ESSENTIALS Unisex Slides ₹998 ₹2,195 54% off Top Discount of the Sale CROCS Unisex Bayaband Clogs Sandal ₹2,547 ₹5",
+      "price": 998,
+      "url": "https://www.flipkart.com/crocs-unisex-essentials-slides/p/itm1b8b4a528015a?pid=SFFGYPUGGVHWW5FB&lid=LSTSFFGYPUGGVHWW5FB7HOQSX&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_29&otracker=search&fm=organic&iid=4d36acc0-8686-457a-b807-de97f18633f7.SFFGYPUGGVHWW5FB.SEARCH&ppt=None&ppn=None&ssid=k1jfmoh8j40000001792513506805&qH=023f61b40dc02292&ov_redirect=true",
+      "source": "flipkart"
+    },
+    "flipkart:https://www.flipkart.com/crocs-bayaband-unisex-clogs/p/itm45b9c1cf73af0": {
+      "title": "CROCS ESSENTIALS Unisex Slides ₹998 ₹2,195 54% off Top Discount of the Sale CROCS Unisex Bayaband Clogs Sandal ₹2,547 ₹5",
+      "price": 998,
+      "url": "https://www.flipkart.com/crocs-bayaband-unisex-clogs/p/itm45b9c1cf73af0?pid=SNDG978FPZGMJHUA&lid=LSTSNDG978FPZGMJHUA2IWR9Q&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_30&otracker=search&fm=organic&iid=4d36acc0-8686-457a-b807-de97f18633f7.SNDG978FPZGMJHUA.SEARCH&ppt=None&ppn=None&ssid=k1jfmoh8j40000001792513506805&qH=023f61b40dc02292&ov_redirect=true",
+      "source": "flipkart"
+    },
+    "flipkart:https://www.flipkart.com/crocs-bayaband-unisex-clogs/p/itm0e93a5fffa48d": {
+      "title": "CROCS ESSENTIALS Unisex Slides ₹998 ₹2,195 54% off Top Discount of the Sale CROCS Unisex Bayaband Clogs Sandal ₹2,547 ₹5",
+      "price": 998,
+      "url": "https://www.flipkart.com/crocs-bayaband-unisex-clogs/p/itm0e93a5fffa48d?pid=SNDFYEZSR6ZECEXR&lid=LSTSNDFYEZSR6ZECEXRKRP6B9&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_31&otracker=search&fm=organic&iid=4d36acc0-8686-457a-b807-de97f18633f7.SNDFYEZSR6ZECEXR.SEARCH&ppt=None&ppn=None&ssid=k1jfmoh8j40000001792513506805&qH=023f61b40dc02292&ov_redirect=true",
+      "source": "flipkart"
+    },
+    "flipkart:https://www.flipkart.com/crocs-offroad-sport-unisex-clogs/p/itm11ababec77f9e": {
+      "title": "CROCS ESSENTIALS Unisex Slides ₹998 ₹2,195 54% off Top Discount of the Sale CROCS Unisex Bayaband Clogs Sandal ₹2,547 ₹5",
+      "price": 998,
+      "url": "https://www.flipkart.com/crocs-offroad-sport-unisex-clogs/p/itm11ababec77f9e?pid=SNDGX8HPZATRFGQS&lid=LSTSNDGX8HPZATRFGQSTTZXVM&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_32&otracker=search&fm=organic&iid=4d36acc0-8686-457a-b807-de97f18633f7.SNDGX8HPZATRFGQS.SEARCH&ppt=None&ppn=None&ssid=k1jfmoh8j40000001792513506805&qH=023f61b40dc02292&ov_redirect=true",
+      "source": "flipkart"
+    },
+    "flipkart:https://www.flipkart.com/crocs-women-clogs/p/itmfd181db433678": {
+      "title": "CROCS Women Clogs Sandal ₹1,249 ₹2,995 58% off Top Discount of the Sale CROCS Bayaband Flip Unisex Flip Flops ₹1,250 ₹3,",
+      "price": 1249,
+      "url": "https://www.flipkart.com/crocs-women-clogs/p/itmfd181db433678?pid=SNDHHESNNP64XRFG&lid=LSTSNDHHESNNP64XRFGR7HSCL&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_33&otracker=search&fm=organic&iid=4d36acc0-8686-457a-b807-de97f18633f7.SNDHHESNNP64XRFG.SEARCH&ppt=None&ppn=None&ssid=k1jfmoh8j40000001792513506805&qH=023f61b40dc02292&ov_redirect=true",
+      "source": "flipkart"
+    },
+    "flipkart:https://www.flipkart.com/crocs-baya-unisex-clogs/p/itmf9zdfzpbnfrnz": {
+      "title": "CROCS Women Clogs Sandal ₹1,249 ₹2,995 58% off Top Discount of the Sale CROCS Bayaband Flip Unisex Flip Flops ₹1,250 ₹3,",
+      "price": 1249,
+      "url": "https://www.flipkart.com/crocs-baya-unisex-clogs/p/itmf9zdfzpbnfrnz?pid=SNDENG9CCMBJ3TAB&lid=LSTSNDENG9CCMBJ3TABCNRAZQ&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_35&otracker=search&fm=organic&iid=4d36acc0-8686-457a-b807-de97f18633f7.SNDENG9CCMBJ3TAB.SEARCH&ppt=None&ppn=None&ssid=k1jfmoh8j40000001792513506805&qH=023f61b40dc02292&ov_redirect=true",
+      "source": "flipkart"
+    },
+    "flipkart:https://www.flipkart.com/crocs-crocband-men-clogs/p/itmee46de007afab": {
+      "title": "CROCS Women Clogs Sandal ₹1,249 ₹2,995 58% off Top Discount of the Sale CROCS Bayaband Flip Unisex Flip Flops ₹1,250 ₹3,",
+      "price": 1249,
+      "url": "https://www.flipkart.com/crocs-crocband-men-clogs/p/itmee46de007afab?pid=SNDFV6GEXUANARGK&lid=LSTSNDFV6GEXUANARGKBR4GMY&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_36&otracker=search&fm=organic&iid=4d36acc0-8686-457a-b807-de97f18633f7.SNDFV6GEXUANARGK.SEARCH&ppt=None&ppn=None&ssid=k1jfmoh8j40000001792513506805&qH=023f61b40dc02292&ov_redirect=true",
+      "source": "flipkart"
+    },
+    "flipkart:https://www.flipkart.com/crocs-unisex-slides/p/itm3c0fdce0a08f4": {
+      "title": "CROCS Unisex Slides ₹998 ₹2,195 54% off Top Discount of the Sale CROCS Women Flip Flops ₹1,152 ₹2,195 47% off Only 1 lef",
+      "price": 998,
+      "url": "https://www.flipkart.com/crocs-unisex-slides/p/itm3c0fdce0a08f4?pid=SFFHFGBFSZBYKEDS&lid=LSTSFFHFGBFSZBYKEDSGKDSBM&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_37&otracker=search&fm=organic&iid=4d36acc0-8686-457a-b807-de97f18633f7.SFFHFGBFSZBYKEDS.SEARCH&ppt=None&ppn=None&ssid=k1jfmoh8j40000001792513506805&qH=023f61b40dc02292&ov_redirect=true",
+      "source": "flipkart"
+    },
+    "flipkart:https://www.flipkart.com/crocs-women-flip-flops/p/itm9117a67f583f3": {
+      "title": "CROCS Unisex Slides ₹998 ₹2,195 54% off Top Discount of the Sale CROCS Women Flip Flops ₹1,152 ₹2,195 47% off Only 1 lef",
+      "price": 998,
+      "url": "https://www.flipkart.com/crocs-women-flip-flops/p/itm9117a67f583f3?pid=SFFHHERCUMUHWGEM&lid=LSTSFFHHERCUMUHWGEMKBKKZJ&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_38&otracker=search&fm=organic&iid=4d36acc0-8686-457a-b807-de97f18633f7.SFFHHERCUMUHWGEM.SEARCH&ppt=None&ppn=None&ssid=k1jfmoh8j40000001792513506805&qH=023f61b40dc02292&ov_redirect=true",
+      "source": "flipkart"
+    },
+    "flipkart:https://www.flipkart.com/crocs-women-flip-flops/p/itmc0f9cd8527ec2": {
+      "title": "CROCS Unisex Slides ₹998 ₹2,195 54% off Top Discount of the Sale CROCS Women Flip Flops ₹1,152 ₹2,195 47% off Only 1 lef",
+      "price": 998,
+      "url": "https://www.flipkart.com/crocs-women-flip-flops/p/itmc0f9cd8527ec2?pid=SFFHGA9H9XKDKKZZ&lid=LSTSFFHGA9H9XKDKKZZAEHN4T&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_39&otracker=search&fm=organic&iid=4d36acc0-8686-457a-b807-de97f18633f7.SFFHGA9H9XKDKKZZ.SEARCH&ppt=None&ppn=None&ssid=k1jfmoh8j40000001792513506805&qH=023f61b40dc02292&ov_redirect=true",
+      "source": "flipkart"
+    },
+    "flipkart:https://www.flipkart.com/crocs-women-capri-flip-flops/p/itmc19165a827820": {
+      "title": "CROCS Unisex Slides ₹998 ₹2,195 54% off Top Discount of the Sale CROCS Women Flip Flops ₹1,152 ₹2,195 47% off Only 1 lef",
+      "price": 998,
+      "url": "https://www.flipkart.com/crocs-women-capri-flip-flops/p/itmc19165a827820?pid=SFFEQYYMVJBCZAQQ&lid=LSTSFFEQYYMVJBCZAQQVGAMBX&marketplace=FLIPKART&q=Crocs&store=osp&srno=s_1_40&otracker=search&fm=organic&iid=4d36acc0-8686-457a-b807-de97f18633f7.SFFEQYYMVJBCZAQQ.SEARCH&ppt=None&ppn=None&ssid=k1jfmoh8j40000001792513506805&qH=023f61b40dc02292&ov_redirect=true",
       "source": "flipkart"
     }
   }
